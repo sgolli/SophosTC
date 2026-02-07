@@ -1,45 +1,58 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'Blog | Sophos Technology Consultancy LLC',
   description: 'Latest insights on fintech, payments, and software development from Sophos Technology Consultancy.',
 };
 
-export default function BlogPage() {
-  const posts = [
-    {
-      title: 'The Future of Digital Payments in the UAE',
-      excerpt: 'Exploring how digital payment solutions are transforming the financial landscape in the United Arab Emirates and what businesses need to prepare for.',
-      date: 'March 15, 2024',
-    },
-    {
-      title: 'Why Fintech Companies Need Custom Software Solutions',
-      excerpt: 'Off-the-shelf solutions can only take you so far. Discover why custom software development is essential for fintech companies looking to scale.',
-      date: 'March 8, 2024',
-    },
-    {
-      title: 'Securing Payment Gateways: Best Practices for 2024',
-      excerpt: 'A comprehensive guide to implementing robust security measures in payment gateway integrations to protect your business and customers.',
-      date: 'February 28, 2024',
-    },
-    {
-      title: 'Cloud Migration Strategies for Financial Institutions',
-      excerpt: 'Step-by-step approaches to successfully migrating financial systems to the cloud while maintaining compliance and security.',
-      date: 'February 20, 2024',
-    },
-    {
-      title: 'AI and Machine Learning in Modern Banking',
-      excerpt: 'How artificial intelligence and machine learning are revolutionizing banking operations, from fraud detection to personalized customer experiences.',
-      date: 'February 12, 2024',
-    },
-    {
-      title: 'The Rise of Open Banking APIs',
-      excerpt: 'Understanding the impact of open banking and how API-driven architectures are creating new opportunities in the financial services sector.',
-      date: 'February 5, 2024',
-    },
-  ];
+const posts = [
+  {
+    title: 'Unlocking Business Potential Through Cutting-Edge Software Development',
+    excerpt: 'In today\'s fast-paced digital world, businesses in the finance, payments, and fintech industries need to stay ahead of the curve with innovative software solutions.',
+    date: 'Mar 20, 2024',
+    image: 'https://i0.wp.com/sophostc.com/wp-content/uploads/2024/03/6.png?resize=400%2C250&ssl=1',
+    url: 'https://sophostc.com/2024/03/unlocking-business-potential-through-cutting-edge-software-development/',
+  },
+  {
+    title: 'Streamlining Payments: The Power of Seamless Payment Gateway Integration',
+    excerpt: 'In the world of e-commerce and online transactions, a seamless payment experience is crucial for customer satisfaction and business growth.',
+    date: 'Mar 7, 2024',
+    image: 'https://i0.wp.com/sophostc.com/wp-content/uploads/2024/03/5.png?resize=400%2C250&ssl=1',
+    url: 'https://sophostc.com/2024/03/streamlining-payments/',
+  },
+  {
+    title: 'Unlocking the Power: Strategies for Cloud Migration and Optimization',
+    excerpt: 'In today\'s fast-paced, data-driven business environment, cloud computing has emerged as a transformative force for organizations of all sizes.',
+    date: 'Feb 21, 2024',
+    image: 'https://i0.wp.com/sophostc.com/wp-content/uploads/2024/03/1.png?resize=400%2C250&ssl=1',
+    url: 'https://sophostc.com/2024/02/the-importance-of-lorem-ipsum/',
+  },
+  {
+    title: 'Navigating the Fintech Revolution: The Value of Expert Fintech Consulting',
+    excerpt: 'The world of finance is undergoing a rapid transformation, driven by the rise of financial technology and the need for digital-first solutions.',
+    date: 'Feb 2, 2024',
+    image: 'https://i0.wp.com/sophostc.com/wp-content/uploads/2024/03/4.png?resize=400%2C250&ssl=1',
+    url: 'https://sophostc.com/2024/02/navigating-the-fintech-revolution/',
+  },
+  {
+    title: 'Transforming Banking Operations: The Benefits of Modern Core Banking Systems',
+    excerpt: 'In today\'s fast-paced, digital-first world, traditional banking institutions face increasing pressure to modernize their operations.',
+    date: 'Jan 15, 2024',
+    image: 'https://i0.wp.com/sophostc.com/wp-content/uploads/2024/03/3.png?resize=400%2C250&ssl=1',
+    url: 'https://sophostc.com/2024/01/transforming-banking-operations/',
+  },
+  {
+    title: 'Empowering Finance on the Go: The Rise of Mobile App Development',
+    excerpt: 'Mobile technology is reshaping the financial services landscape, enabling customers to manage their finances anytime, anywhere.',
+    date: 'Jan 5, 2024',
+    image: 'https://i0.wp.com/sophostc.com/wp-content/uploads/2024/03/2.png?resize=400%2C250&ssl=1',
+    url: 'https://sophostc.com/2024/01/empowering-finance-on-the-go/',
+  },
+];
 
+export default function BlogPage() {
   return (
     <>
       {/* Hero banner */}
@@ -49,83 +62,38 @@ export default function BlogPage() {
           padding: '38.4px 0 51.2px',
         }}
       >
-        <div className="r-container" style={{maxWidth:"1080px",width:"80%",margin:"0 auto",textAlign:"center"}}>
-          <h1
-            style={{
-              fontFamily: 'var(--font-roboto), Roboto, Helvetica, Arial, sans-serif',
-              fontSize: '65px',
-              fontWeight: 900,
-              lineHeight: '71.5px',
-              color: '#000000',
-              letterSpacing: '1.3px',
-            }}
-          >
-            Our Blog
+        <div className="r-container" style={{ maxWidth: '1080px', width: '80%', margin: '0 auto', textAlign: 'center' }}>
+          <h1 style={{ fontFamily: 'var(--font-roboto), Roboto, Helvetica, Arial, sans-serif', fontSize: '65px', fontWeight: 900, lineHeight: '71.5px', color: '#000000', letterSpacing: '1.3px', textTransform: 'uppercase' }}>
+            Blog
           </h1>
-          <p  style={{ marginTop: '20px', maxWidth: '600px', marginLeft: 'auto', marginRight: 'auto' }}>
-            Insights and updates from the world of fintech, payments, and software development.
-          </p>
         </div>
       </section>
 
-      {/* Blog posts */}
-      <section style={{padding:"51.2px 0",backgroundColor:"#ffffff"}}>
-        <div className="r-container" style={{maxWidth:"1080px",width:"80%",margin:"0 auto"}}>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '30px' }}>
+      {/* Blog posts grid */}
+      <section style={{ padding: '51.2px 0', backgroundColor: '#ffffff' }}>
+        <div className="r-container" style={{ maxWidth: '1080px', width: '80%', margin: '0 auto' }}>
+          <div className="r-blog-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '30px' }}>
             {posts.map((post, index) => (
-              <article
-                key={index}
-                style={{
-                  borderBottom: index < posts.length - 1 ? '1px solid #e5e5e5' : 'none',
-                  paddingBottom: '30px',
-                }}
-              >
-                <p
-                  style={{
-                    fontSize: '12px',
-                    fontWeight: 600,
-                    color: '#25e89d',
-                    textTransform: 'uppercase',
-                    letterSpacing: '1px',
-                    marginBottom: '8px',
-                  }}
-                >
-                  {post.date}
-                </p>
-                <h3
-                  style={{
-                    fontFamily: 'var(--font-roboto), Roboto, Helvetica, Arial, sans-serif',
-                    fontSize: '26px',
-                    fontWeight: 700,
-                    color: '#121212',
-                    lineHeight: '1.3em',
-                    marginBottom: '10px',
-                  }}
-                >
-                  {post.title}
-                </h3>
-                <p
-                  style={{
-                    fontSize: '14px',
-                    fontWeight: 500,
-                    lineHeight: '23.8px',
-                    color: '#666666',
-                    marginBottom: '10px',
-                  }}
-                >
-                  {post.excerpt}
-                </p>
-                <Link
-                  href="#"
-                  style={{
-                    color: '#2ea3f2',
-                    fontSize: '14px',
-                    fontWeight: 600,
-                    textDecoration: 'none',
-                  }}
-                >
-                  Read More →
-                </Link>
+              <article key={index} style={{ backgroundColor: '#2d2d2d', borderRadius: '4px', overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
+                <a href={post.url} target="_blank" rel="noopener noreferrer" style={{ display: 'block', overflow: 'hidden' }}>
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    width={400}
+                    height={250}
+                    style={{ width: '100%', height: '220px', objectFit: 'cover', display: 'block', transition: 'transform 0.3s' }}
+                  />
+                </a>
+                <div style={{ padding: '24px 20px', flex: 1, display: 'flex', flexDirection: 'column' }}>
+                  <h3 style={{ fontFamily: 'var(--font-roboto), Roboto, Helvetica, Arial, sans-serif', fontSize: '18px', fontWeight: 700, color: '#ffffff', lineHeight: '1.4em', marginBottom: '16px' }}>
+                    <a href={post.url} target="_blank" rel="noopener noreferrer" style={{ color: '#ffffff', textDecoration: 'none' }}>
+                      {post.title}
+                    </a>
+                  </h3>
+                  <p style={{ fontSize: '13px', fontWeight: 500, color: '#999999', fontFamily: 'monospace', marginTop: 'auto' }}>
+                    by sophostc | {post.date} |
+                  </p>
+                </div>
               </article>
             ))}
           </div>

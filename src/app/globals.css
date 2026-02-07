@@ -156,15 +156,25 @@ h2[style*="textAlign"]::after {
   .r-footer-cols {
     flex-direction: column !important;
     gap: 30px !important;
+    align-items: flex-start !important;
   }
   .r-footer-cols > div {
     max-width: 100% !important;
     flex: 1 1 100% !important;
+    width: 100% !important;
+  }
+  .r-footer-logo-col {
+    text-align: left !important;
   }
   .r-footer-bottom {
     flex-direction: column !important;
     text-align: center !important;
     align-items: center !important;
+    gap: 20px !important;
+  }
+  .r-footer-bottom p {
+    font-size: 13px !important;
+    line-height: 1.5 !important;
   }
 
   /* Blog grid */
