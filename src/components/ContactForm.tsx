@@ -99,8 +99,22 @@ export default function ContactForm() {
           }}
         />
         <div>
-          <button type="submit" className="et-button">
-            Send Message
+          <button
+            type="submit"
+            style={{
+              fontFamily: 'var(--font-roboto), Roboto, sans-serif',
+              fontSize: '16px',
+              fontWeight: 500,
+              color: '#ffffff',
+              backgroundColor: '#242424',
+              padding: '15px 45px 15px 35px',
+              borderRadius: '14px',
+              border: 'none',
+              letterSpacing: '1px',
+              cursor: 'pointer',
+            }}
+          >
+            Send Message →
           </button>
         </div>
       </div>

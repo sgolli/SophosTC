@@ -3,6 +3,20 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
+const buttonStyle = {
+  fontFamily: 'var(--font-roboto), Roboto, Helvetica, Arial, sans-serif',
+  fontSize: '16px',
+  fontWeight: 500 as const,
+  color: '#ffffff',
+  backgroundColor: '#242424',
+  padding: '15px 45px 15px 35px',
+  borderRadius: '14px',
+  border: '0px solid #ffffff',
+  letterSpacing: '1px',
+  display: 'inline-block' as const,
+  textDecoration: 'none',
+};
+
 export default function HeroSection() {
   return (
     <section
@@ -11,13 +25,13 @@ export default function HeroSection() {
         padding: '76.8px 0 128px 0',
       }}
     >
-      <div className="et-container">
+      <div style={{ maxWidth: '1080px', width: '80%', margin: '0 auto' }}>
         <div
           style={{
             display: 'flex',
             alignItems: 'center',
             gap: '40px',
-            flexWrap: 'wrap',
+            flexWrap: 'wrap' as const,
           }}
         >
           {/* Left Content - 55% */}
@@ -58,8 +72,8 @@ export default function HeroSection() {
             >
               With our deep industry expertise and innovative approach, we empower businesses to stay ahead in the rapidly evolving digital landscape. Discover how our tailored solutions can transform your operations, enhance customer experiences, and drive sustainable growth.
             </p>
-            <Link href="/contact" className="et-button">
-              Get Started
+            <Link href="/contact" style={buttonStyle}>
+              Get Started →
             </Link>
           </div>
 

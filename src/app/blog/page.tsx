@@ -49,7 +49,7 @@ export default function BlogPage() {
           padding: '76.8px 0',
         }}
       >
-        <div className="et-container" style={{ textAlign: 'center' }}>
+        <div style={{maxWidth:"1080px",width:"80%",margin:"0 auto",textAlign:"center"}}>
           <h1
             style={{
               fontFamily: 'var(--font-roboto), Roboto, Helvetica, Arial, sans-serif',
@@ -62,15 +62,15 @@ export default function BlogPage() {
           >
             Our Blog
           </h1>
-          <p className="tagline" style={{ marginTop: '20px', maxWidth: '600px', marginLeft: 'auto', marginRight: 'auto' }}>
+          <p  style={{ marginTop: '20px', maxWidth: '600px', marginLeft: 'auto', marginRight: 'auto' }}>
             Insights and updates from the world of fintech, payments, and software development.
           </p>
         </div>
       </section>
 
       {/* Blog posts */}
-      <section className="section-white">
-        <div className="et-container">
+      <section style={{padding:"51.2px 0",backgroundColor:"#ffffff"}}>
+        <div style={{maxWidth:"1080px",width:"80%",margin:"0 auto"}}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '30px' }}>
             {posts.map((post, index) => (
               <article

@@ -55,7 +55,7 @@ export default function ProjectsPage() {
           padding: '76.8px 0',
         }}
       >
-        <div className="et-container" style={{ textAlign: 'center' }}>
+        <div style={{maxWidth:"1080px",width:"80%",margin:"0 auto",textAlign:"center"}}>
           <h1
             style={{
               fontFamily: 'var(--font-roboto), Roboto, Helvetica, Arial, sans-serif',
@@ -68,15 +68,15 @@ export default function ProjectsPage() {
           >
             Our Projects
           </h1>
-          <p className="tagline" style={{ marginTop: '20px', maxWidth: '700px', marginLeft: 'auto', marginRight: 'auto' }}>
+          <p  style={{ marginTop: '20px', maxWidth: '700px', marginLeft: 'auto', marginRight: 'auto' }}>
             We&apos;ve had the privilege of working on groundbreaking projects that showcase our expertise in finance, payments, and fintech.
           </p>
         </div>
       </section>
 
       {/* Projects grid */}
-      <section className="section-white">
-        <div className="et-container">
+      <section style={{padding:"51.2px 0",backgroundColor:"#ffffff"}}>
+        <div style={{maxWidth:"1080px",width:"80%",margin:"0 auto"}}>
           <div
             style={{
               display: 'grid',
@@ -97,8 +97,8 @@ export default function ProjectsPage() {
       </section>
 
       {/* CTA */}
-      <section className="section-accent">
-        <div className="et-container" style={{ textAlign: 'center' }}>
+      <section style={{padding:"51.2px 0",backgroundColor:"#25e89d"}}>
+        <div style={{maxWidth:"1080px",width:"80%",margin:"0 auto",textAlign:"center"}}>
           <h2 style={{ marginBottom: '20px' }}>Accelerate your business</h2>
           <p
             style={{
@@ -112,7 +112,7 @@ export default function ProjectsPage() {
           >
             Ready to transform your operations with cutting-edge technology? Let&apos;s discuss your next project.
           </p>
-          <a href="/contact" className="et-button">
+          <a href="/contact" style={{fontFamily:"var(--font-roboto),Roboto,sans-serif",fontSize:"16px",fontWeight:500,color:"#fff",backgroundColor:"#242424",padding:"15px 45px 15px 35px",borderRadius:"14px",border:"none",letterSpacing:"1px",display:"inline-block",textDecoration:"none"}}>
             Start Your Project
           </a>
         </div>

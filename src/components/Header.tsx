@@ -4,6 +4,21 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
 
+const buttonStyle = {
+  fontFamily: 'var(--font-roboto), Roboto, Helvetica, Arial, sans-serif',
+  fontSize: '16px',
+  fontWeight: 500 as const,
+  color: '#ffffff',
+  backgroundColor: '#242424',
+  padding: '15px 45px 15px 35px',
+  borderRadius: '14px',
+  border: 'none',
+  letterSpacing: '1px',
+  display: 'inline-block' as const,
+  textDecoration: 'none',
+  whiteSpace: 'nowrap' as const,
+};
+
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -16,125 +31,134 @@ export default function Header() {
   ];
 
   return (
-    <header 
-      className="fixed top-0 left-0 right-0 z-50 bg-white" 
-      style={{ 
+    <header
+      style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        right: 0,
+        zIndex: 99999,
         height: '94px',
-        boxShadow: 'rgba(0, 0, 0, 0.1) 0px 1px 0px 0px'
+        backgroundColor: '#ffffff',
+        boxShadow: 'rgba(0, 0, 0, 0.1) 0px 1px 0px 0px',
       }}
     >
-      <div className="mx-auto h-full" style={{ maxWidth: '1080px', paddingLeft: '4%', paddingRight: '4%' }}>
-        <div className="flex h-full items-center justify-between">
-          {/* Logo */}
-          <Link href="/" className="flex items-center">
-            <Image
-              src="/images/logo.png"
-              alt="Sophos Technology Consultancy LLC"
-              width={193}
-              height={85}
-              style={{ maxHeight: '90%', width: 'auto', height: 'auto' }}
-              priority
-            />
-          </Link>
+      <div
+        style={{
+          maxWidth: '1080px',
+          width: '80%',
+          margin: '0 auto',
+          height: '100%',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+        }}
+      >
+        {/* Logo */}
+        <Link href="/" style={{ display: 'flex', alignItems: 'center', flexShrink: 0 }}>
+          <Image
+            src="/images/logo.png"
+            alt="Sophos Technology Consultancy LLC"
+            width={193}
+            height={85}
+            style={{ maxHeight: '80px', width: 'auto', height: 'auto' }}
+            priority
+          />
+        </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="hover:opacity-80 transition-opacity"
-                style={{ 
-                  fontFamily: 'var(--font-roboto-flex)',
-                  fontSize: '18px', 
-                  fontWeight: 600, 
-                  letterSpacing: '1px',
-                  color: '#333333'
-                }}
-              >
-                {link.label}
-              </Link>
-            ))}
+        {/* Desktop Navigation */}
+        <nav
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '20px',
+          }}
+          className="hidden lg:flex"
+        >
+          {navLinks.map((link) => (
             <Link
-              href="/contact"
-              className="ml-4 transition-opacity hover:opacity-90"
+              key={link.href}
+              href={link.href}
               style={{
-                fontFamily: 'var(--font-roboto)',
+                fontFamily: 'var(--font-roboto-flex), "Roboto Flex", Helvetica, Arial, sans-serif',
                 fontSize: '16px',
-                fontWeight: 500,
+                fontWeight: 600,
                 letterSpacing: '1px',
-                padding: '15px 45px 15px 35px',
-                backgroundColor: 'rgb(36, 36, 36)',
-                color: '#ffffff',
-                borderRadius: '14px',
-                border: '0px solid #ffffff'
+                color: '#333333',
+                textDecoration: 'none',
+                whiteSpace: 'nowrap',
               }}
             >
-              Get Started
+              {link.label}
             </Link>
-          </nav>
+          ))}
+          <Link href="/contact" style={{ ...buttonStyle, marginLeft: '10px' }}>
+            Get Started →
+          </Link>
+        </nav>
 
-          {/* Mobile menu button */}
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 text-gray-700 hover:text-primary"
-            aria-label="Toggle menu"
-          >
-            <svg
-              className="h-6 w-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              {mobileMenuOpen ? (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              ) : (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              )}
-            </svg>
-          </button>
-        </div>
-
-        {/* Mobile Navigation */}
-        {mobileMenuOpen && (
-          <nav className="md:hidden pb-4 border-t border-gray-200 mt-2">
-            <div className="flex flex-col gap-2 pt-4">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 hover:text-primary rounded-md transition-colors"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {link.label}
-                </Link>
-              ))}
-              <Link
-                href="/contact"
-                className="mx-4 mt-2 rounded-md text-center text-sm font-semibold transition-colors"
-                style={{
-                  padding: '10px 20px',
-                  backgroundColor: 'rgb(36, 36, 36)',
-                  color: '#ffffff'
-                }}
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Get Started
-              </Link>
-            </div>
-          </nav>
-        )}
+        {/* Mobile menu button */}
+        <button
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          className="lg:hidden"
+          style={{
+            padding: '8px',
+            color: '#333',
+            background: 'none',
+            border: 'none',
+            cursor: 'pointer',
+          }}
+          aria-label="Toggle menu"
+        >
+          <svg width="28" height="28" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            {mobileMenuOpen ? (
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            ) : (
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            )}
+          </svg>
+        </button>
       </div>
+
+      {/* Mobile Navigation */}
+      {mobileMenuOpen && (
+        <nav
+          className="lg:hidden"
+          style={{
+            backgroundColor: '#ffffff',
+            borderTop: '1px solid #e5e5e5',
+            padding: '20px',
+            boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+          }}
+        >
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              style={{
+                display: 'block',
+                padding: '12px 0',
+                fontFamily: 'var(--font-roboto-flex)',
+                fontSize: '16px',
+                fontWeight: 600,
+                color: '#333333',
+                textDecoration: 'none',
+                borderBottom: '1px solid #f0f0f0',
+              }}
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {link.label}
+            </Link>
+          ))}
+          <Link
+            href="/contact"
+            style={{ ...buttonStyle, marginTop: '15px', textAlign: 'center' as const }}
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            Get Started →
+          </Link>
+        </nav>
+      )}
     </header>
   );
 }

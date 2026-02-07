@@ -2,6 +2,26 @@ import Link from 'next/link';
 import HeroSection from '@/components/HeroSection';
 import ServiceCard from '@/components/ServiceCard';
 
+const buttonStyle = {
+  fontFamily: 'var(--font-roboto), Roboto, Helvetica, Arial, sans-serif',
+  fontSize: '16px',
+  fontWeight: 500 as const,
+  color: '#ffffff',
+  backgroundColor: '#242424',
+  padding: '15px 45px 15px 35px',
+  borderRadius: '14px',
+  border: 'none',
+  letterSpacing: '1px',
+  display: 'inline-block' as const,
+  textDecoration: 'none',
+};
+
+const containerStyle = {
+  maxWidth: '1080px',
+  width: '80%',
+  margin: '0 auto',
+};
+
 export default function HomePage() {
   const services = [
     {
@@ -42,18 +62,30 @@ export default function HomePage() {
       <HeroSection />
 
       {/* Services Section - gray bg */}
-      <section className="section-gray">
-        <div className="et-container">
+      <section style={{ backgroundColor: '#f2f2f2', padding: '51.2px 0' }}>
+        <div style={containerStyle}>
           <div style={{ textAlign: 'center', marginBottom: '50px' }}>
             <h2>Services</h2>
-            <p className="tagline" style={{ marginTop: '15px', maxWidth: '700px', marginLeft: 'auto', marginRight: 'auto' }}>
+            <p
+              style={{
+                fontFamily: 'var(--font-inter), Inter, Helvetica, Arial, sans-serif',
+                fontSize: '16px',
+                fontWeight: 500,
+                color: '#121212',
+                lineHeight: '28.8px',
+                marginTop: '15px',
+                maxWidth: '700px',
+                marginLeft: 'auto',
+                marginRight: 'auto',
+              }}
+            >
               Empowering finance through technology, innovation, and expertise.
             </p>
           </div>
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+              gridTemplateColumns: 'repeat(3, 1fr)',
               gap: '30px',
             }}
           >
@@ -72,7 +104,7 @@ export default function HomePage() {
 
       {/* About Section - white */}
       <section style={{ padding: '4% 0' }}>
-        <div className="et-container">
+        <div style={containerStyle}>
           <div style={{ textAlign: 'center', marginBottom: '30px' }}>
             <h2>About Us</h2>
           </div>
@@ -93,8 +125,8 @@ export default function HomePage() {
       </section>
 
       {/* Projects Section - white */}
-      <section className="section-white">
-        <div className="et-container">
+      <section style={{ padding: '51.2px 0' }}>
+        <div style={containerStyle}>
           <div style={{ textAlign: 'center', marginBottom: '30px' }}>
             <h2>Projects</h2>
           </div>
@@ -109,14 +141,14 @@ export default function HomePage() {
               textAlign: 'center',
             }}
           >
-            We&apos;ve had the privilege of working on groundbreaking projects that showcase our expertise. From developing secure and scalable banking solutions to integrating seamless payment gateways, our portfolio demonstrates our commitment to delivering cutting-edge technology that drives success for our clients. Explore our featured projects to see how we&apos;ve helped businesses like yours transform their operations, enhance customer experiences, and stay ahead in the rapidly evolving digital landscape.
+            We&apos;ve had the privilege of working on groundbreaking projects that showcase our expertise. From developing secure and scalable banking solutions to integrating seamless payment gateways, our portfolio demonstrates our commitment to delivering cutting-edge technology that drives success for our clients.
           </p>
         </div>
       </section>
 
       {/* CTA Section - accent green */}
-      <section className="section-accent">
-        <div className="et-container" style={{ textAlign: 'center' }}>
+      <section style={{ backgroundColor: '#25e89d', padding: '51.2px 0' }}>
+        <div style={{ ...containerStyle, textAlign: 'center' as const }}>
           <h2 style={{ marginBottom: '20px' }}>Solutions driving your success</h2>
           <p
             style={{
@@ -130,25 +162,34 @@ export default function HomePage() {
           >
             Sophos Technology Consultancy empowers finance, payments, and fintech businesses with innovative software development, strategic consulting, and cloud expertise. Let our team help you navigate the digital landscape and achieve your goals. Contact us today to start your transformation!
           </p>
-          <Link href="/contact" className="et-button">
-            Get Started
+          <Link href="/contact" style={buttonStyle}>
+            Get Started →
           </Link>
         </div>
       </section>
 
       {/* Blog Teaser - white */}
       <section style={{ padding: '4% 0' }}>
-        <div className="et-container" style={{ textAlign: 'center' }}>
+        <div style={{ ...containerStyle, textAlign: 'center' as const }}>
           <h2>Our Blog</h2>
           <p
-            className="tagline"
-            style={{ marginTop: '15px', maxWidth: '600px', marginLeft: 'auto', marginRight: 'auto' }}
+            style={{
+              fontFamily: 'var(--font-inter), Inter, Helvetica, Arial, sans-serif',
+              fontSize: '16px',
+              fontWeight: 500,
+              color: '#121212',
+              lineHeight: '28.8px',
+              marginTop: '15px',
+              maxWidth: '600px',
+              marginLeft: 'auto',
+              marginRight: 'auto',
+            }}
           >
             Stay updated with the latest insights in fintech, payments, and software development.
           </p>
           <div style={{ marginTop: '30px' }}>
-            <Link href="/blog" className="et-button">
-              Read Our Blog
+            <Link href="/blog" style={buttonStyle}>
+              Read Our Blog →
             </Link>
           </div>
         </div>

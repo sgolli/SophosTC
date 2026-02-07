@@ -54,7 +54,7 @@ export default function ServicesPage() {
           padding: '76.8px 0 76.8px 0',
         }}
       >
-        <div className="et-container" style={{ textAlign: 'center' }}>
+        <div style={{maxWidth:"1080px",width:"80%",margin:"0 auto",textAlign:"center"}}>
           <h1
             style={{
               fontFamily: 'var(--font-roboto), Roboto, Helvetica, Arial, sans-serif',
@@ -67,7 +67,7 @@ export default function ServicesPage() {
           >
             Our Services
           </h1>
-          <p className="tagline" style={{ marginTop: '20px', maxWidth: '600px', marginLeft: 'auto', marginRight: 'auto' }}>
+          <p  style={{ marginTop: '20px', maxWidth: '600px', marginLeft: 'auto', marginRight: 'auto' }}>
             Empowering finance through technology, innovation, and expertise.
           </p>
         </div>
@@ -82,7 +82,7 @@ export default function ServicesPage() {
             padding: '51.19px 0',
           }}
         >
-          <div className="et-container">
+          <div style={{maxWidth:"1080px",width:"80%",margin:"0 auto"}}>
             <h2 style={{ marginBottom: '20px' }}>{service.title}</h2>
             <p
               style={{
@@ -118,8 +118,8 @@ export default function ServicesPage() {
       ))}
 
       {/* CTA */}
-      <section className="section-accent">
-        <div className="et-container" style={{ textAlign: 'center' }}>
+      <section style={{padding:"51.2px 0",backgroundColor:"#25e89d"}}>
+        <div style={{maxWidth:"1080px",width:"80%",margin:"0 auto",textAlign:"center"}}>
           <h2 style={{ marginBottom: '20px' }}>Ready to get started?</h2>
           <p
             style={{
@@ -133,7 +133,7 @@ export default function ServicesPage() {
           >
             Contact us today to discuss how we can help transform your business with our cutting-edge solutions.
           </p>
-          <a href="/contact" className="et-button">
+          <a href="/contact" style={{fontFamily:"var(--font-roboto),Roboto,sans-serif",fontSize:"16px",fontWeight:500,color:"#fff",backgroundColor:"#242424",padding:"15px 45px 15px 35px",borderRadius:"14px",border:"none",letterSpacing:"1px",display:"inline-block",textDecoration:"none"}}>
             Contact Us
           </a>
         </div>
