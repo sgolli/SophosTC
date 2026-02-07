@@ -22,7 +22,7 @@ export default function HeroSection() {
     <section
       style={{
         background: 'linear-gradient(1deg, rgb(142, 235, 226) 0%, rgb(37, 232, 157) 100%)',
-        padding: '38.4px 0 51.2px 0',
+        padding: '60px 0 80px 0',
       }}
     >
       <div style={{ maxWidth: '1080px', width: '80%', margin: '0 auto' }}>
