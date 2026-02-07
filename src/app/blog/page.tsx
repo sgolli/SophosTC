@@ -1,166 +1,136 @@
-'use client';
-
-import { motion } from 'framer-motion';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 
+export const metadata: Metadata = {
+  title: 'Blog | Sophos Technology Consultancy LLC',
+  description: 'Latest insights on fintech, payments, and software development from Sophos Technology Consultancy.',
+};
+
 export default function BlogPage() {
-  const blogPosts = [
+  const posts = [
     {
-      title: 'The Future of Fintech: Trends to Watch in 2026',
-      excerpt:
-        'Explore the emerging trends shaping the fintech landscape, from AI-powered financial services to decentralized finance (DeFi) innovations.',
-      date: 'February 5, 2026',
-      category: 'Industry Insights',
+      title: 'The Future of Digital Payments in the UAE',
+      excerpt: 'Exploring how digital payment solutions are transforming the financial landscape in the United Arab Emirates and what businesses need to prepare for.',
+      date: 'March 15, 2024',
     },
     {
-      title: 'Building Secure Payment Systems: Best Practices',
-      excerpt:
-        'Learn the essential security considerations and best practices for developing robust payment processing systems that protect user data and prevent fraud.',
-      date: 'January 28, 2026',
-      category: 'Technical',
+      title: 'Why Fintech Companies Need Custom Software Solutions',
+      excerpt: 'Off-the-shelf solutions can only take you so far. Discover why custom software development is essential for fintech companies looking to scale.',
+      date: 'March 8, 2024',
     },
     {
-      title: 'Digital Transformation in Banking: A Complete Guide',
-      excerpt:
-        'How traditional banks can successfully navigate digital transformation, modernize legacy systems, and compete with fintech startups.',
-      date: 'January 15, 2026',
-      category: 'Strategy',
+      title: 'Securing Payment Gateways: Best Practices for 2024',
+      excerpt: 'A comprehensive guide to implementing robust security measures in payment gateway integrations to protect your business and customers.',
+      date: 'February 28, 2024',
     },
     {
-      title: 'Blockchain in Finance: Beyond Cryptocurrency',
-      excerpt:
-        'Discover how blockchain technology is revolutionizing finance beyond crypto, from smart contracts to supply chain finance and identity verification.',
-      date: 'January 8, 2026',
-      category: 'Innovation',
+      title: 'Cloud Migration Strategies for Financial Institutions',
+      excerpt: 'Step-by-step approaches to successfully migrating financial systems to the cloud while maintaining compliance and security.',
+      date: 'February 20, 2024',
     },
     {
-      title: 'Mobile Banking UX: Designing for Trust and Engagement',
-      excerpt:
-        'Key principles for creating mobile banking experiences that build user trust, drive engagement, and deliver exceptional customer satisfaction.',
-      date: 'December 20, 2025',
-      category: 'Design',
+      title: 'AI and Machine Learning in Modern Banking',
+      excerpt: 'How artificial intelligence and machine learning are revolutionizing banking operations, from fraud detection to personalized customer experiences.',
+      date: 'February 12, 2024',
     },
     {
-      title: 'Cloud Migration for Financial Services: A Roadmap',
-      excerpt:
-        'Step-by-step guide to successfully migrating financial services infrastructure to the cloud while maintaining security and compliance.',
-      date: 'December 10, 2025',
-      category: 'Technical',
+      title: 'The Rise of Open Banking APIs',
+      excerpt: 'Understanding the impact of open banking and how API-driven architectures are creating new opportunities in the financial services sector.',
+      date: 'February 5, 2024',
     },
   ];
 
   return (
-    <div className="min-h-screen" style={{ paddingTop: '94px' }}>
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary via-primary to-secondary py-20">
-        <div className="mx-auto px-4 sm:px-6 lg:px-8" style={{ maxWidth: '1080px', width: '80%' }}>
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="text-center text-white"
+    <>
+      {/* Hero banner */}
+      <section
+        style={{
+          backgroundColor: '#25e89d',
+          padding: '76.8px 0',
+        }}
+      >
+        <div className="et-container" style={{ textAlign: 'center' }}>
+          <h1
+            style={{
+              fontFamily: 'var(--font-roboto), Roboto, Helvetica, Arial, sans-serif',
+              fontSize: '65px',
+              fontWeight: 900,
+              lineHeight: '71.5px',
+              color: '#000000',
+              letterSpacing: '1.3px',
+            }}
           >
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">Our Blog</h1>
-            <p className="text-xl max-w-3xl mx-auto text-gray-200">
-              Insights, trends, and expert perspectives on finance, payments, and fintech innovation.
-            </p>
-          </motion.div>
+            Our Blog
+          </h1>
+          <p className="tagline" style={{ marginTop: '20px', maxWidth: '600px', marginLeft: 'auto', marginRight: 'auto' }}>
+            Insights and updates from the world of fintech, payments, and software development.
+          </p>
         </div>
       </section>
 
-      {/* Blog Posts Grid */}
-      <section style={{ paddingTop: '51px', paddingBottom: '51px' }} className=" bg-gray-50">
-        <div className="mx-auto px-4 sm:px-6 lg:px-8" style={{ maxWidth: '1080px', width: '80%' }}>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.map((post, index) => (
-              <motion.article
+      {/* Blog posts */}
+      <section className="section-white">
+        <div className="et-container">
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '30px' }}>
+            {posts.map((post, index) => (
+              <article
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+                style={{
+                  borderBottom: index < posts.length - 1 ? '1px solid #e5e5e5' : 'none',
+                  paddingBottom: '30px',
+                }}
               >
-                <div className="p-8">
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-sm font-semibold text-accent">{post.category}</span>
-                    <span className="text-sm text-gray-500">{post.date}</span>
-                  </div>
-                  <h2 className="text-xl font-bold text-primary mb-4 hover:text-accent transition-colors">
-                    <Link href="#">{post.title}</Link>
-                  </h2>
-                  <p className="text-gray-600 leading-relaxed mb-6">{post.excerpt}</p>
-                  <Link
-                    href="#"
-                    className="inline-flex items-center text-accent font-semibold hover:text-accent/80 transition-colors"
-                  >
-                    Read More
-                    <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </Link>
-                </div>
-              </motion.article>
+                <p
+                  style={{
+                    fontSize: '12px',
+                    fontWeight: 600,
+                    color: '#25e89d',
+                    textTransform: 'uppercase',
+                    letterSpacing: '1px',
+                    marginBottom: '8px',
+                  }}
+                >
+                  {post.date}
+                </p>
+                <h3
+                  style={{
+                    fontFamily: 'var(--font-roboto), Roboto, Helvetica, Arial, sans-serif',
+                    fontSize: '26px',
+                    fontWeight: 700,
+                    color: '#121212',
+                    lineHeight: '1.3em',
+                    marginBottom: '10px',
+                  }}
+                >
+                  {post.title}
+                </h3>
+                <p
+                  style={{
+                    fontSize: '14px',
+                    fontWeight: 500,
+                    lineHeight: '23.8px',
+                    color: '#666666',
+                    marginBottom: '10px',
+                  }}
+                >
+                  {post.excerpt}
+                </p>
+                <Link
+                  href="#"
+                  style={{
+                    color: '#2ea3f2',
+                    fontSize: '14px',
+                    fontWeight: 600,
+                    textDecoration: 'none',
+                  }}
+                >
+                  Read More →
+                </Link>
+              </article>
             ))}
           </div>
-
-          {/* Pagination Placeholder */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="mt-12 text-center"
-          >
-            <div className="inline-flex gap-2">
-              <button className="px-4 py-2 rounded-md bg-white text-gray-700 border border-gray-300 hover:bg-gray-50 transition-colors">
-                Previous
-              </button>
-              <button className="px-4 py-2 rounded-md bg-accent text-white font-semibold">1</button>
-              <button className="px-4 py-2 rounded-md bg-white text-gray-700 border border-gray-300 hover:bg-gray-50 transition-colors">
-                2
-              </button>
-              <button className="px-4 py-2 rounded-md bg-white text-gray-700 border border-gray-300 hover:bg-gray-50 transition-colors">
-                3
-              </button>
-              <button className="px-4 py-2 rounded-md bg-white text-gray-700 border border-gray-300 hover:bg-gray-50 transition-colors">
-                Next
-              </button>
-            </div>
-          </motion.div>
         </div>
       </section>
-
-      {/* Newsletter Section */}
-      <section style={{ paddingTop: '51px', paddingBottom: '51px' }} className=" bg-primary">
-        <div className="mx-auto px-4 sm:px-6 lg:px-8" style={{ maxWidth: '1080px', width: '80%' }}>
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-center text-white"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Stay Updated</h2>
-            <p className="text-lg mb-8 max-w-2xl mx-auto text-gray-200">
-              Subscribe to our newsletter to receive the latest insights, trends, and updates in fintech and software development.
-            </p>
-            <form className="max-w-md mx-auto flex gap-4">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-6 py-3 rounded-md text-gray-900 focus:ring-2 focus:ring-accent focus:outline-none"
-              />
-              <button
-                type="submit"
-                className="px-8 py-3 rounded-md bg-accent text-white font-semibold hover:bg-accent/90 transition-colors"
-              >
-                Subscribe
-              </button>
-            </form>
-          </motion.div>
-        </div>
-      </section>
-    </div>
+    </>
   );
 }

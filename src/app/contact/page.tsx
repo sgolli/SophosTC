@@ -7,16 +7,16 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen" style={{ paddingTop: '94px' }}>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary via-primary to-secondary py-20">
-        <div className="mx-auto px-4 sm:px-6 lg:px-8" style={{ maxWidth: '1080px', width: '80%' }}>
+      <section className="bg-gradient-to-br from-primary via-primary to-secondary" style={{ paddingTop: '51.2px', paddingBottom: '51.2px' }}>
+        <div className="mx-auto" style={{ maxWidth: '1080px', paddingLeft: '4%', paddingRight: '4%' }}>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             className="text-center text-white"
           >
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">Contact Us</h1>
-            <p className="text-xl max-w-3xl mx-auto text-gray-200">
+            <h1 className="mb-6 text-white" style={{ fontSize: '60px', fontWeight: 700, lineHeight: '60px', letterSpacing: '1px' }}>Contact Us</h1>
+            <p className="text-gray-200" style={{ fontSize: '16px', fontWeight: 500, lineHeight: '28.8px', maxWidth: '48rem', margin: '0 auto' }}>
               Let's discuss how we can help transform your business with innovative technology solutions.
             </p>
           </motion.div>
@@ -24,13 +24,13 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Content */}
-      <section style={{ paddingTop: '51px', paddingBottom: '51px' }} className=" bg-gray-50">
-        <div className="mx-auto px-4 sm:px-6 lg:px-8" style={{ maxWidth: '1080px', width: '80%' }}>
+      <section style={{ paddingTop: '51.2px', paddingBottom: '51.2px', backgroundColor: 'rgb(242, 242, 242)' }}>
+        <div className="mx-auto" style={{ maxWidth: '1080px', paddingLeft: '4%', paddingRight: '4%' }}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <div>
-              <h2 className="text-3xl font-bold text-primary mb-6">Send Us a Message</h2>
-              <p className="text-gray-600 mb-8">
+              <h2 style={{ fontSize: '30px', fontWeight: 700, color: 'rgb(18, 18, 18)', marginBottom: '24px' }}>Send Us a Message</h2>
+              <p className="mb-8" style={{ fontSize: '14px', fontWeight: 500, lineHeight: '23.8px', color: 'rgb(102, 102, 102)' }}>
                 Fill out the form below and our team will get back to you within 24 hours.
               </p>
               <ContactForm />
@@ -44,8 +44,8 @@ export default function ContactPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
               >
-                <h2 className="text-3xl font-bold text-primary mb-6">Get In Touch</h2>
-                <p className="text-gray-600 mb-8 leading-relaxed">
+                <h2 style={{ fontSize: '30px', fontWeight: 700, color: 'rgb(18, 18, 18)', marginBottom: '24px' }}>Get In Touch</h2>
+                <p className="mb-8" style={{ fontSize: '14px', fontWeight: 500, lineHeight: '23.8px', color: 'rgb(102, 102, 102)' }}>
                   Sophos Technology Consultancy is your premier partner for cutting-edge software solutions in finance, payments, and fintech. Based in the UAE, we serve clients globally with innovative technology solutions.
                 </p>
 
@@ -58,8 +58,8 @@ export default function ContactPage() {
                       </svg>
                     </div>
                     <div className="ml-4">
-                      <h3 className="text-lg font-semibold text-primary mb-1">Location</h3>
-                      <p className="text-gray-600">United Arab Emirates</p>
+                      <h3 style={{ fontSize: '18px', fontWeight: 700, color: 'rgb(18, 18, 18)', marginBottom: '4px' }}>Location</h3>
+                      <p style={{ fontSize: '14px', fontWeight: 500, lineHeight: '23.8px', color: 'rgb(102, 102, 102)' }}>United Arab Emirates</p>
                     </div>
                   </div>
 
@@ -70,8 +70,8 @@ export default function ContactPage() {
                       </svg>
                     </div>
                     <div className="ml-4">
-                      <h3 className="text-lg font-semibold text-primary mb-1">Email</h3>
-                      <p className="text-gray-600">info@sophostc.com</p>
+                      <h3 style={{ fontSize: '18px', fontWeight: 700, color: 'rgb(18, 18, 18)', marginBottom: '4px' }}>Email</h3>
+                      <p style={{ fontSize: '14px', fontWeight: 500, lineHeight: '23.8px', color: 'rgb(102, 102, 102)' }}>info@sophostc.com</p>
                     </div>
                   </div>
 
@@ -82,46 +82,46 @@ export default function ContactPage() {
                       </svg>
                     </div>
                     <div className="ml-4">
-                      <h3 className="text-lg font-semibold text-primary mb-1">Business Hours</h3>
-                      <p className="text-gray-600">Sunday - Thursday: 9:00 AM - 6:00 PM GST</p>
+                      <h3 style={{ fontSize: '18px', fontWeight: 700, color: 'rgb(18, 18, 18)', marginBottom: '4px' }}>Business Hours</h3>
+                      <p style={{ fontSize: '14px', fontWeight: 500, lineHeight: '23.8px', color: 'rgb(102, 102, 102)' }}>Sunday - Thursday: 9:00 AM - 6:00 PM GST</p>
                     </div>
                   </div>
                 </div>
 
                 {/* Services Overview */}
                 <div className="mt-12 bg-white rounded-lg shadow-lg p-8">
-                  <h3 className="text-xl font-bold text-primary mb-4">Our Services</h3>
+                  <h3 style={{ fontSize: '20px', fontWeight: 700, color: 'rgb(18, 18, 18)', marginBottom: '16px' }}>Our Services</h3>
                   <ul className="space-y-3">
                     <li className="flex items-start">
                       <svg className="w-5 h-5 text-accent mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
-                      <span className="text-gray-700">Software Development for Financial Institutions</span>
+                      <span style={{ fontSize: '14px', fontWeight: 500, color: 'rgb(102, 102, 102)' }}>Software Development for Financial Institutions</span>
                     </li>
                     <li className="flex items-start">
                       <svg className="w-5 h-5 text-accent mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
-                      <span className="text-gray-700">Payment Gateway Integration & Optimization</span>
+                      <span style={{ fontSize: '14px', fontWeight: 500, color: 'rgb(102, 102, 102)' }}>Payment Gateway Integration & Optimization</span>
                     </li>
                     <li className="flex items-start">
                       <svg className="w-5 h-5 text-accent mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
-                      <span className="text-gray-700">Fintech Consulting and Innovation</span>
+                      <span style={{ fontSize: '14px', fontWeight: 500, color: 'rgb(102, 102, 102)' }}>Fintech Consulting and Innovation</span>
                     </li>
                     <li className="flex items-start">
                       <svg className="w-5 h-5 text-accent mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
-                      <span className="text-gray-700">Cloud Architecture & Migration</span>
+                      <span style={{ fontSize: '14px', fontWeight: 500, color: 'rgb(102, 102, 102)' }}>Cloud Architecture & Migration</span>
                     </li>
                   </ul>
                 </div>
 
                 {/* Social Links */}
                 <div className="mt-8">
-                  <h3 className="text-lg font-semibold text-primary mb-4">Follow Us</h3>
+                  <h3 style={{ fontSize: '18px', fontWeight: 700, color: 'rgb(18, 18, 18)', marginBottom: '16px' }}>Follow Us</h3>
                   <div className="flex gap-4">
                     <a
                       href="https://github.com/sophostc"
@@ -154,8 +154,8 @@ export default function ContactPage() {
       </section>
 
       {/* Map Placeholder */}
-      <section style={{ paddingTop: '51px', paddingBottom: '51px' }} className=" bg-white">
-        <div className="mx-auto px-4 sm:px-6 lg:px-8" style={{ maxWidth: '1080px', width: '80%' }}>
+      <section style={{ paddingTop: '51.2px', paddingBottom: '51.2px' }} className="bg-white">
+        <div className="mx-auto" style={{ maxWidth: '1080px', paddingLeft: '4%', paddingRight: '4%' }}>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
