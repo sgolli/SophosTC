@@ -22,7 +22,7 @@ export default function HeroSection() {
     <section
       style={{
         background: 'linear-gradient(1deg, rgb(142, 235, 226) 0%, rgb(37, 232, 157) 100%)',
-        padding: '76.8px 0 128px 0',
+        padding: '38.4px 0 51.2px 0',
       }}
     >
       <div style={{ maxWidth: '1080px', width: '80%', margin: '0 auto' }}>
@@ -73,7 +73,7 @@ export default function HeroSection() {
               With our deep industry expertise and innovative approach, we empower businesses to stay ahead in the rapidly evolving digital landscape. Discover how our tailored solutions can transform your operations, enhance customer experiences, and drive sustainable growth.
             </p>
             <Link href="/contact" style={buttonStyle}>
-              Get Started →
+              Get Started
             </Link>
           </div>
 

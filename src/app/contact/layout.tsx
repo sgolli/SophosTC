@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Sophos Technology Consultancy LLC",
+  title: "Contact Us",
 };
 
 export default function ContactLayout({
