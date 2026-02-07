@@ -38,10 +38,10 @@ export default function ProjectsPage() {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen" style={{ paddingTop: '94px' }}>
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary via-primary to-secondary py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto px-4 sm:px-6 lg:px-8" style={{ maxWidth: '1080px', width: '80%' }}>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -57,8 +57,8 @@ export default function ProjectsPage() {
       </section>
 
       {/* Introduction */}
-      <section className="py-20 bg-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section style={{ paddingTop: '51px', paddingBottom: '51px' }} className=" bg-white">
+        <div className="mx-auto px-4 sm:px-6 lg:px-8" style={{ maxWidth: '1080px', width: '80%' }}>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -75,8 +75,8 @@ export default function ProjectsPage() {
       </section>
 
       {/* Projects Grid */}
-      <section className="py-20 bg-gray-50">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section style={{ paddingTop: '51px', paddingBottom: '51px' }} className=" bg-gray-50">
+        <div className="mx-auto px-4 sm:px-6 lg:px-8" style={{ maxWidth: '1080px', width: '80%' }}>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
               <ProjectCard
@@ -91,8 +91,8 @@ export default function ProjectsPage() {
       </section>
 
       {/* Client Partnership Section */}
-      <section className="py-20 bg-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section style={{ paddingTop: '51px', paddingBottom: '51px' }} className=" bg-white">
+        <div className="mx-auto px-4 sm:px-6 lg:px-8" style={{ maxWidth: '1080px', width: '80%' }}>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -125,8 +125,8 @@ export default function ProjectsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section style={{ paddingTop: '51px', paddingBottom: '51px' }} className=" bg-gray-50">
+        <div className="mx-auto px-4 sm:px-6 lg:px-8" style={{ maxWidth: '1080px', width: '80%' }}>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}

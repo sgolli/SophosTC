@@ -50,10 +50,10 @@ export default function BlogPage() {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen" style={{ paddingTop: '94px' }}>
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary via-primary to-secondary py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto px-4 sm:px-6 lg:px-8" style={{ maxWidth: '1080px', width: '80%' }}>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -69,8 +69,8 @@ export default function BlogPage() {
       </section>
 
       {/* Blog Posts Grid */}
-      <section className="py-20 bg-gray-50">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section style={{ paddingTop: '51px', paddingBottom: '51px' }} className=" bg-gray-50">
+        <div className="mx-auto px-4 sm:px-6 lg:px-8" style={{ maxWidth: '1080px', width: '80%' }}>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post, index) => (
               <motion.article
@@ -132,8 +132,8 @@ export default function BlogPage() {
       </section>
 
       {/* Newsletter Section */}
-      <section className="py-20 bg-primary">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section style={{ paddingTop: '51px', paddingBottom: '51px' }} className=" bg-primary">
+        <div className="mx-auto px-4 sm:px-6 lg:px-8" style={{ maxWidth: '1080px', width: '80%' }}>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
