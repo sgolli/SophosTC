@@ -68,7 +68,7 @@ export default function HeroSection() {
           >
             <div className="relative w-full aspect-square">
               <Image
-                src="https://i0.wp.com/sophostc.com/wp-content/uploads/2024/03/Untitled-design-5-1.png"
+                src="/images/hero.png"
                 alt="Fintech Innovation"
                 fill
                 className="object-contain"

@@ -9,7 +9,7 @@ export default function Footer() {
           {/* Column 1: Logo & Tagline */}
           <div>
             <Image
-              src="https://sophostc.com/wp-content/uploads/2024/03/STC-Logo-Transparent-1.png"
+              src="/images/logo.png"
               alt="Sophos Technology Consultancy LLC"
               width={193}
               height={85}

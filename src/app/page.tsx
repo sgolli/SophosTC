@@ -44,7 +44,7 @@ export default function HomePage() {
       <HeroSection />
 
       {/* Services Section */}
-      <section style={{ paddingTop: '51px', paddingBottom: '51px' }} className="bg-gray-50">
+      <section style={{ paddingTop: '51px', paddingBottom: '51px', backgroundColor: '#f2f2f2' }}>
         <div className="mx-auto px-4 sm:px-6 lg:px-8" style={{ maxWidth: '1080px', width: '80%' }}>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -138,7 +138,7 @@ export default function HomePage() {
       </section>
 
       {/* Projects Teaser */}
-      <section style={{ paddingTop: '51px', paddingBottom: '51px' }} className="bg-gray-50">
+      <section style={{ paddingTop: '51px', paddingBottom: '51px', backgroundColor: '#f2f2f2' }}>
         <div className="mx-auto px-4 sm:px-6 lg:px-8" style={{ maxWidth: '1080px', width: '80%' }}>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -162,24 +162,35 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section style={{ paddingTop: '51px', paddingBottom: '51px' }} className="bg-gradient-to-r from-primary via-secondary to-primary">
+      <section style={{ paddingTop: '51px', paddingBottom: '51px' }} className="bg-white">
         <div className="mx-auto px-4 sm:px-6 lg:px-8" style={{ maxWidth: '1080px', width: '80%' }}>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-center text-white"
+            className="text-center"
           >
-            <h2 style={{ fontSize: '60px', lineHeight: '1em', fontWeight: 700 }} className="mb-6 text-white">
+            <h2 style={{ fontSize: '60px', lineHeight: '1em', fontWeight: 700, color: '#121212' }} className="mb-6">
               Solutions driving your success
             </h2>
-            <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto text-gray-200">
+            <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto" style={{ color: '#666666' }}>
               Sophos Technology Consultancy empowers finance, payments, and fintech businesses with innovative software development, strategic consulting, and cloud expertise. Let our team help you navigate the digital landscape and achieve your goals. Contact us today to start your transformation!
             </p>
             <Link
               href="/contact"
-              className="inline-block rounded-md bg-accent px-8 py-4 text-lg font-semibold text-white hover:bg-accent/90 transition-colors shadow-lg hover:shadow-xl"
+              className="inline-block transition-colors"
+              style={{
+                fontSize: '16px',
+                fontWeight: 500,
+                letterSpacing: '1px',
+                padding: '15px 45px 15px 35px',
+                backgroundColor: '#242424',
+                color: '#ffffff',
+                borderRadius: '14px',
+                border: '0px solid #ffffff',
+                fontFamily: 'var(--font-roboto)'
+              }}
             >
               Get Started Today
             </Link>
