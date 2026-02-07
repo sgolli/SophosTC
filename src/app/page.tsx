@@ -138,7 +138,7 @@ export default function HomePage() {
       </section>
 
       {/* Projects Teaser */}
-      <section style={{ paddingTop: '51px', paddingBottom: '51px', backgroundColor: '#f2f2f2' }}>
+      <section style={{ paddingTop: '51px', paddingBottom: '51px', backgroundColor: '#25e89d' }}>
         <div className="mx-auto px-4 sm:px-6 lg:px-8" style={{ maxWidth: '1080px', width: '80%' }}>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -153,7 +153,18 @@ export default function HomePage() {
             </p>
             <Link
               href="/projects"
-              className="inline-block rounded-md bg-secondary px-8 py-4 text-base font-semibold text-white hover:bg-secondary/90 transition-colors"
+              className="inline-block transition-colors"
+              style={{
+                fontSize: '16px',
+                fontWeight: 500,
+                letterSpacing: '1px',
+                padding: '15px 45px 15px 35px',
+                backgroundColor: '#242424',
+                color: '#ffffff',
+                borderRadius: '14px',
+                border: '0px solid #ffffff',
+                fontFamily: 'var(--font-roboto)'
+              }}
             >
               View Our Projects
             </Link>

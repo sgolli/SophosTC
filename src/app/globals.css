@@ -6,9 +6,12 @@
   --primary: #272a49;
   --accent: #25e89d;
   --secondary: #2ea3f2;
-  --text-color: #666666;
-  --heading-color: #121212;
+  --text-color: rgb(102, 102, 102);
+  --heading-color: rgb(18, 18, 18);
   --nav-color: #333333;
+  --footer-link: rgb(46, 163, 242);
+  --dark-bg: rgb(36, 36, 36);
+  --gray-bg: rgb(242, 242, 242);
 }
 
 @theme inline {
@@ -20,37 +23,59 @@
   --font-sans: var(--font-open-sans);
   --font-heading: var(--font-roboto);
   --font-nav: var(--font-roboto-flex);
-}
-
-body {
-  background: var(--background);
-  color: var(--text-color);
-  font-family: var(--font-open-sans), Arial, sans-serif;
-  line-height: 1.7em;
-  font-size: 14px;
-  font-weight: 500;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  color: var(--heading-color);
-  font-family: var(--font-roboto), Helvetica, Arial, Lucida, sans-serif;
-  font-weight: 700;
-}
-
-h1 {
-  font-size: 65px;
-  line-height: 1.1em;
-  font-weight: 900;
-}
-
-h2 {
-  font-size: 60px;
-  line-height: 1em;
-  font-weight: 700;
+  --font-inter: var(--font-inter);
+  
+  /* Exact spacing values from original site */
+  --spacing-header: 94px;
+  --spacing-hero-top: 76.8px;
+  --spacing-hero-bottom: 128px;
+  --spacing-section: 51.2px;
+  --spacing-section-percent: 4%;
+  --spacing-container: 25.6px;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  background: var(--background);
+  color: var(--text-color);
+  font-family: var(--font-open-sans), Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 23.8px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading-color);
+  font-family: var(--font-roboto), Helvetica, Arial, Lucida, sans-serif;
+}
+
+h1 {
+  font-family: var(--font-roboto);
+  font-size: 65px;
+  font-weight: 900;
+  line-height: 71.5px;
+  color: #000000;
+  letter-spacing: 1.3px;
+}
+
+h2 {
+  font-family: var(--font-roboto);
+  font-size: 60px;
+  font-weight: 700;
+  color: var(--heading-color);
+  line-height: 60px;
+  letter-spacing: 1px;
+}
+
+.tagline {
+  font-family: var(--font-inter);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--heading-color);
+  line-height: 28.8px;
 }
