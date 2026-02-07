@@ -79,6 +79,24 @@ a:hover {
   opacity: 0.8;
 }
 
+/* H2 underline divider - matching original */
+h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: #121212;
+  margin-top: 15px;
+}
+
+/* Center the divider when h2 is centered */
+.text-center h2::after,
+h2[style*="text-align: center"]::after,
+h2[style*="textAlign"]::after {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Responsive */
 @media (max-width: 980px) {
   h1 {

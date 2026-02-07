@@ -97,6 +97,7 @@ export default function HomePage() {
                 title={service.title}
                 description={service.description}
                 index={index}
+                bgColor={['#2be8a1', '#6a6767', '#272a49'][index]}
               />
             ))}
           </div>
@@ -150,8 +151,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Projects Section - green bg, 2 columns with image */}
-      <section style={{ backgroundColor: '#25e89d', padding: '51.2px 0' }}>
+      {/* Projects Section - green bg with diagonal top */}
+      <section style={{ backgroundColor: '#25e89d', padding: '80px 0 51.2px 0', position: 'relative', clipPath: 'polygon(0 8%, 100% 0, 100% 100%, 0 100%)' }}>
         <div style={containerStyle}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '40px', flexWrap: 'wrap' as const }}>
             {/* Left - Image */}
