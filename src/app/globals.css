@@ -101,6 +101,69 @@ h2[style*="textAlign"]::after {
 }
 
 /* ============================================
+   FOOTER BASE STYLES (desktop)
+   ============================================ */
+.r-footer {
+  background-color: #ffffff;
+  padding: 60px 0 0 0;
+}
+.r-footer-container {
+  max-width: 1080px;
+  width: 80%;
+  margin: 0 auto;
+}
+.r-footer-cols {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+.r-footer-logo-col {
+  flex: 1 1 300px;
+  max-width: 400px;
+}
+.r-footer-logo {
+  margin-bottom: 20px;
+}
+.r-footer-link-col {
+  flex: 0 1 150px;
+}
+.r-footer-link {
+  color: #474747;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+  padding: 5px 0;
+}
+.r-footer-divider {
+  border-top: 1px solid #e0e0e0;
+  margin-top: 40px;
+  padding: 25px 0;
+}
+.r-footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.r-footer-socials {
+  display: flex;
+  gap: 10px;
+}
+.r-social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #444;
+  color: #fff;
+}
+
+/* ============================================
    DESKTOP NAV / MOBILE MENU BUTTON DEFAULTS
    ============================================ */
 .r-desktop-nav {
@@ -153,18 +216,33 @@ h2[style*="textAlign"]::after {
   }
 
   /* Footer */
+  .r-footer {
+    padding: 40px 0 0 0 !important;
+  }
+  .r-footer-container {
+    width: 90% !important;
+  }
   .r-footer-cols {
     flex-direction: column !important;
     gap: 30px !important;
-    align-items: flex-start !important;
+    align-items: center !important;
   }
-  .r-footer-cols > div {
+  .r-footer-logo-col,
+  .r-footer-link-col {
     max-width: 100% !important;
     flex: 1 1 100% !important;
     width: 100% !important;
+    text-align: center !important;
   }
-  .r-footer-logo-col {
-    text-align: left !important;
+  .r-footer-logo {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .r-footer-link {
+    padding: 10px 0 !important;
+    display: block !important;
+    min-height: 44px !important;
+    line-height: 24px !important;
   }
   .r-footer-bottom {
     flex-direction: column !important;
@@ -175,6 +253,9 @@ h2[style*="textAlign"]::after {
   .r-footer-bottom p {
     font-size: 13px !important;
     line-height: 1.5 !important;
+  }
+  .r-footer-socials {
+    justify-content: center !important;
   }
 
   /* Blog grid */
