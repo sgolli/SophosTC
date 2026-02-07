@@ -51,6 +51,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${openSans.variable} ${roboto.variable} ${robotoFlex.variable} ${inter.variable}`}>
         <Header />
+        <div className="r-spacer" style={{ height: '94px' }} />
         <main>{children}</main>
         <Footer />
       </body>

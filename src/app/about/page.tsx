@@ -75,6 +75,7 @@ export default function AboutPage() {
         <div className="r-container" style={{maxWidth:"1080px",width:"80%",margin:"0 auto"}}>
           <h2 style={{ textAlign: 'center', marginBottom: '40px' }}>Our Expertise</h2>
           <div
+            className="r-expertise-grid"
             style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',

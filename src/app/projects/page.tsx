@@ -78,9 +78,10 @@ export default function ProjectsPage() {
       <section style={{padding:"51.2px 0",backgroundColor:"#ffffff"}}>
         <div className="r-container" style={{maxWidth:"1080px",width:"80%",margin:"0 auto"}}>
           <div
+            className="r-projects-grid"
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
               gap: '30px',
             }}
           >

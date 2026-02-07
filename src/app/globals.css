@@ -35,6 +35,7 @@ body {
   line-height: 1.7em;
   font-size: 14px;
   font-weight: 500;
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -79,7 +80,7 @@ a:hover {
   opacity: 0.8;
 }
 
-/* H2 underline divider - matching original */
+/* H2 underline divider */
 h2::after {
   content: '';
   display: block;
@@ -89,7 +90,6 @@ h2::after {
   margin-top: 15px;
 }
 
-/* Center the divider when h2 is centered */
 .text-center h2::after,
 h2[style*="text-align: center"]::after,
 h2[style*="textAlign"]::after {
@@ -97,7 +97,24 @@ h2[style*="textAlign"]::after {
   margin-right: auto;
 }
 
-/* Responsive */
+/* ============================================
+   DESKTOP NAV / MOBILE MENU BUTTON DEFAULTS
+   ============================================ */
+.r-desktop-nav {
+  display: flex;
+}
+
+.r-mobile-menu-btn {
+  display: none !important;
+}
+
+.r-mobile-nav {
+  display: block;
+}
+
+/* ============================================
+   RESPONSIVE: TABLET (max-width: 980px)
+   ============================================ */
 @media (max-width: 980px) {
   h1 {
     font-size: 36px !important;
@@ -107,61 +124,29 @@ h2[style*="textAlign"]::after {
     font-size: 32px !important;
     line-height: 36px !important;
   }
-}
 
-@media (max-width: 768px) {
-  h1 {
-    font-size: 28px !important;
-    line-height: 34px !important;
+  /* Show hamburger, hide desktop nav */
+  .r-desktop-nav {
+    display: none !important;
   }
-  h2 {
-    font-size: 26px !important;
-    line-height: 30px !important;
+  .r-mobile-menu-btn {
+    display: block !important;
   }
 
   /* Containers */
   .r-container {
-    width: 95% !important;
+    width: 90% !important;
   }
 
-  /* Header */
-  .r-header {
-    height: 70px !important;
-  }
-  .r-header-logo img {
-    max-height: 60px !important;
-  }
-
-  /* Spacer after fixed header */
-  .r-spacer {
-    height: 70px !important;
-  }
-
-  /* Hero sections */
-  .r-hero {
-    padding: 30px 0 40px 0 !important;
-  }
-  .r-hero h1 {
-    font-size: 32px !important;
-    line-height: 38px !important;
+  /* Grids → single column */
+  .r-grid-3,
+  .r-grid-2 {
+    grid-template-columns: 1fr !important;
   }
 
   /* Flex rows → stack */
   .r-flex-row {
     flex-direction: column !important;
-  }
-
-  /* Grids → single column */
-  .r-grid-3 {
-    grid-template-columns: 1fr !important;
-  }
-  .r-grid-2 {
-    grid-template-columns: 1fr !important;
-  }
-
-  /* Sections padding */
-  .r-section {
-    padding: 30px 0 !important;
   }
 
   /* Footer */
@@ -176,27 +161,82 @@ h2[style*="textAlign"]::after {
   .r-footer-bottom {
     flex-direction: column !important;
     text-align: center !important;
+    align-items: center !important;
   }
 
-  /* Buttons */
-  .r-btn {
-    display: block !important;
-    text-align: center !important;
-    width: 100% !important;
-  }
-
-  /* Images */
-  img {
-    max-width: 100% !important;
-    height: auto !important;
-  }
-
-  /* Blog grid on homepage */
+  /* Blog grid */
   .r-blog-grid {
     grid-template-columns: 1fr !important;
   }
 
-  /* Contact form inputs */
+  /* Projects grid - force single column */
+  .r-projects-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* About expertise grid */
+  .r-expertise-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Contact grid */
+  .r-contact-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ============================================
+   RESPONSIVE: MOBILE (max-width: 768px)
+   ============================================ */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 28px !important;
+    line-height: 34px !important;
+  }
+  h2 {
+    font-size: 26px !important;
+    line-height: 30px !important;
+  }
+
+  /* Containers */
+  .r-container {
+    width: 92% !important;
+  }
+
+  /* Header */
+  .r-header {
+    height: 70px !important;
+  }
+  .r-header-logo img {
+    max-height: 55px !important;
+  }
+
+  /* Spacer after fixed header */
+  .r-spacer {
+    height: 70px !important;
+  }
+
+  /* Hero sections */
+  .r-hero {
+    padding: 30px 0 40px 0 !important;
+  }
+  .r-hero h1 {
+    font-size: 28px !important;
+    line-height: 34px !important;
+  }
+
+  /* Sections padding */
+  .r-section {
+    padding: 30px 0 !important;
+  }
+
+  /* Clip path sections */
+  .r-clip-section {
+    clip-path: polygon(0 3%, 100% 0, 100% 100%, 0 100%) !important;
+    padding-top: 40px !important;
+  }
+
+  /* Form rows */
   .r-form-row {
     flex-direction: column !important;
   }
@@ -205,18 +245,40 @@ h2[style*="textAlign"]::after {
     min-width: 100% !important;
   }
 
-  /* Clip path sections - reduce angle on mobile */
-  .r-clip-section {
-    clip-path: polygon(0 4%, 100% 0, 100% 100%, 0 100%) !important;
-    padding-top: 50px !important;
+  /* Images */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
   }
 
-  /* h2 after divider */
+  /* h2 divider */
   h2::after {
     margin-left: 0;
   }
+
+  /* Contact page hero */
+  .r-contact-hero h1 {
+    font-size: 32px !important;
+    line-height: 38px !important;
+  }
+
+  /* All inline font-size overrides for hero h1 */
+  .r-hero h1,
+  section h1 {
+    font-size: 28px !important;
+    line-height: 34px !important;
+  }
+
+  /* Service cards in grid */
+  .r-grid-3 > div,
+  .r-blog-grid > div {
+    width: 100% !important;
+  }
 }
 
+/* ============================================
+   RESPONSIVE: SMALL MOBILE (max-width: 480px)
+   ============================================ */
 @media (max-width: 480px) {
   h1 {
     font-size: 24px !important;
@@ -234,8 +296,15 @@ h2[style*="textAlign"]::after {
     width: 92% !important;
   }
 
-  .r-hero h1 {
-    font-size: 28px !important;
-    line-height: 34px !important;
+  .r-hero h1,
+  section h1 {
+    font-size: 24px !important;
+    line-height: 30px !important;
+  }
+
+  /* Reduce section padding further */
+  .r-section,
+  .r-hero {
+    padding: 25px 0 !important;
   }
 }

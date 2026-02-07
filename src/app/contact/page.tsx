@@ -5,18 +5,17 @@ import ContactForm from '@/components/ContactForm';
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen" style={{ paddingTop: '94px' }}>
+    <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary via-primary to-secondary" style={{ paddingTop: '51.2px', paddingBottom: '51.2px' }}>
-        <div className="mx-auto" style={{ maxWidth: '1080px', paddingLeft: '4%', paddingRight: '4%' }}>
+      <section className="r-hero" style={{ background: 'linear-gradient(1deg, rgb(142, 235, 226) 0%, rgb(37, 232, 157) 100%)', padding: '38.4px 0 51.2px' }}>
+        <div className="r-container" style={{ maxWidth: '1080px', width: '80%', margin: '0 auto', textAlign: 'center' }}>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-center text-white"
           >
-            <h1 className="mb-6 text-white" style={{ fontSize: '60px', fontWeight: 700, lineHeight: '60px', letterSpacing: '1px' }}>Contact Us</h1>
-            <p className="text-gray-200" style={{ fontSize: '16px', fontWeight: 500, lineHeight: '28.8px', maxWidth: '48rem', margin: '0 auto' }}>
+            <h1 style={{ fontFamily: 'var(--font-roboto), Roboto, Helvetica, Arial, sans-serif', fontSize: '65px', fontWeight: 900, lineHeight: '71.5px', color: '#000000', letterSpacing: '1.3px' }}>Contact Us</h1>
+            <p style={{ fontSize: '16px', fontWeight: 500, lineHeight: '28.8px', maxWidth: '600px', margin: '20px auto 0', color: '#121212' }}>
               Let's discuss how we can help transform your business with innovative technology solutions.
             </p>
           </motion.div>
@@ -24,9 +23,9 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Content */}
-      <section style={{ paddingTop: '51.2px', paddingBottom: '51.2px', backgroundColor: 'rgb(242, 242, 242)' }}>
-        <div className="mx-auto" style={{ maxWidth: '1080px', paddingLeft: '4%', paddingRight: '4%' }}>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <section style={{ padding: '51.2px 0', backgroundColor: 'rgb(242, 242, 242)' }}>
+        <div className="r-container" style={{ maxWidth: '1080px', width: '80%', margin: '0 auto' }}>
+          <div className="r-contact-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '48px' }}>
             {/* Contact Form */}
             <div>
               <h2 style={{ fontSize: '30px', fontWeight: 700, color: 'rgb(18, 18, 18)', marginBottom: '24px' }}>Send Us a Message</h2>
@@ -154,8 +153,8 @@ export default function ContactPage() {
       </section>
 
       {/* Map Placeholder */}
-      <section style={{ paddingTop: '51.2px', paddingBottom: '51.2px' }} className="bg-white">
-        <div className="mx-auto" style={{ maxWidth: '1080px', paddingLeft: '4%', paddingRight: '4%' }}>
+      <section style={{ padding: '51.2px 0' }}>
+        <div className="r-container" style={{ maxWidth: '1080px', width: '80%', margin: '0 auto' }}>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}

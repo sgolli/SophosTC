@@ -53,14 +53,13 @@ export default function Header() {
           />
         </Link>
 
-        {/* Desktop Navigation */}
+        {/* Desktop Navigation - NO inline display, let CSS handle it */}
         <nav
+          className="r-desktop-nav"
           style={{
-            display: 'flex',
             alignItems: 'center',
             gap: '25px',
           }}
-          className="hidden lg:flex"
         >
           {navLinks.map((link) => (
             <Link
@@ -81,10 +80,10 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* Mobile menu button */}
+        {/* Mobile menu button - hidden by default, shown on mobile via CSS */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="lg:hidden"
+          className="r-mobile-menu-btn"
           style={{
             padding: '8px',
             color: '#333',
@@ -107,7 +106,7 @@ export default function Header() {
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
         <nav
-          className="lg:hidden"
+          className="r-mobile-nav"
           style={{
             backgroundColor: '#ffffff',
             borderTop: '1px solid #e5e5e5',
