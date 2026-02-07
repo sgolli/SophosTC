@@ -29,7 +29,10 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Sophos Technology Consultancy LLC |",
+  title: {
+    default: "Sophos Technology Consultancy LLC |",
+    template: "%s | Sophos Technology Consultancy LLC"
+  },
   description: "Your premier partner for cutting-edge software solutions in finance, payments, and fintech.",
   keywords: "fintech, software development, payment gateway, finance technology, UAE, consulting",
   openGraph: {
@@ -48,7 +51,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${openSans.variable} ${roboto.variable} ${robotoFlex.variable} ${inter.variable}`}>
         <Header />
-        <main style={{ paddingTop: '94px' }}>{children}</main>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>
