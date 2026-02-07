@@ -160,7 +160,7 @@ export default function ContactPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="bg-gray-200 rounded-lg h-96 flex items-center justify-center"
+            className="r-map-placeholder bg-gray-200 rounded-lg h-96 flex items-center justify-center"
           >
             <p className="text-gray-500 text-lg">Map Location (UAE)</p>
           </motion.div>

@@ -198,6 +198,15 @@ h2[style*="textAlign"]::after {
     line-height: 30px !important;
   }
 
+  /* Increase base body text for mobile readability */
+  body {
+    font-size: 16px !important;
+  }
+  p {
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+  }
+
   /* Containers */
   .r-container {
     width: 92% !important;
@@ -209,6 +218,15 @@ h2[style*="textAlign"]::after {
   }
   .r-header-logo img {
     max-height: 55px !important;
+  }
+
+  /* Hamburger button - larger touch target */
+  .r-mobile-menu-btn {
+    min-width: 48px !important;
+    min-height: 48px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
 
   /* Spacer after fixed header */
@@ -236,13 +254,26 @@ h2[style*="textAlign"]::after {
     padding-top: 40px !important;
   }
 
-  /* Form rows */
+  /* Form rows - stack on mobile */
   .r-form-row {
     flex-direction: column !important;
   }
   .r-form-row input {
     flex: 1 1 100% !important;
     min-width: 100% !important;
+  }
+
+  /* Textarea - no resize on mobile */
+  textarea {
+    resize: none !important;
+  }
+
+  /* CTA buttons - full width on mobile */
+  .r-cta-btn {
+    width: 100% !important;
+    text-align: center !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
   }
 
   /* Images */
@@ -273,6 +304,22 @@ h2[style*="textAlign"]::after {
   .r-grid-3 > div,
   .r-blog-grid > div {
     width: 100% !important;
+  }
+
+  /* Map placeholder - smaller on mobile */
+  .r-map-placeholder {
+    height: 200px !important;
+  }
+
+  /* Footer social icons - larger touch targets */
+  .r-social-icon {
+    width: 44px !important;
+    height: 44px !important;
+  }
+
+  /* Flex row children - reduce minWidth to avoid overflow */
+  .r-flex-row > div {
+    min-width: 0 !important;
   }
 }
 
