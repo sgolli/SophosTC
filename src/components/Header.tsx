@@ -4,21 +4,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
 
-const buttonStyle = {
-  fontFamily: 'var(--font-roboto), Roboto, Helvetica, Arial, sans-serif',
-  fontSize: '16px',
-  fontWeight: 500 as const,
-  color: '#ffffff',
-  backgroundColor: '#242424',
-  padding: '15px 45px 15px 35px',
-  borderRadius: '14px',
-  border: 'none',
-  letterSpacing: '1px',
-  display: 'inline-block' as const,
-  textDecoration: 'none',
-  whiteSpace: 'nowrap' as const,
-};
-
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -71,7 +56,7 @@ export default function Header() {
           style={{
             display: 'flex',
             alignItems: 'center',
-            gap: '20px',
+            gap: '25px',
           }}
           className="hidden lg:flex"
         >
@@ -81,7 +66,7 @@ export default function Header() {
               href={link.href}
               style={{
                 fontFamily: 'var(--font-roboto-flex), "Roboto Flex", Helvetica, Arial, sans-serif',
-                fontSize: '16px',
+                fontSize: '18px',
                 fontWeight: 600,
                 letterSpacing: '1px',
                 color: '#333333',
@@ -92,9 +77,6 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
-          <Link href="/contact" style={{ ...buttonStyle, marginLeft: '10px' }}>
-            Get Started →
-          </Link>
         </nav>
 
         {/* Mobile menu button */}
@@ -139,7 +121,7 @@ export default function Header() {
                 display: 'block',
                 padding: '12px 0',
                 fontFamily: 'var(--font-roboto-flex)',
-                fontSize: '16px',
+                fontSize: '18px',
                 fontWeight: 600,
                 color: '#333333',
                 textDecoration: 'none',
@@ -150,13 +132,6 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
-          <Link
-            href="/contact"
-            style={{ ...buttonStyle, marginTop: '15px', textAlign: 'center' as const }}
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            Get Started →
-          </Link>
         </nav>
       )}
     </header>

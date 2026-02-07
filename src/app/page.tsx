@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import HeroSection from '@/components/HeroSection';
 import ServiceCard from '@/components/ServiceCard';
 
@@ -102,95 +103,177 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* About Section - white */}
+      {/* About Section - white, 2 columns with image */}
       <section style={{ padding: '4% 0' }}>
         <div style={containerStyle}>
-          <div style={{ textAlign: 'center', marginBottom: '30px' }}>
-            <h2>About Us</h2>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '40px', flexWrap: 'wrap' as const }}>
+            {/* Left - Text */}
+            <div style={{ flex: '1 1 45%', minWidth: '300px' }}>
+              <h2 style={{ marginBottom: '20px' }}>About Us</h2>
+              <p
+                style={{
+                  fontSize: '14px',
+                  fontWeight: 500,
+                  lineHeight: '23.8px',
+                  color: '#666666',
+                  marginBottom: '15px',
+                }}
+              >
+                At Sophos Technology Consultancy, we are passionate about harnessing the power of technology to revolutionize the finance, payments, and fintech industries. With our team of skilled developers, industry experts, and strategic thinkers, we deliver cutting-edge software solutions that drive efficiency, innovation, and growth.
+              </p>
+              <p
+                style={{
+                  fontSize: '14px',
+                  fontWeight: 500,
+                  lineHeight: '23.8px',
+                  color: '#666666',
+                  marginBottom: '25px',
+                }}
+              >
+                Our client-centric approach ensures that we understand your unique challenges and objectives, allowing us to craft tailored solutions that exceed your expectations. As your trusted technology partner, we are committed to helping you navigate the digital landscape, seize new opportunities, and achieve long-term success in the ever-evolving world of finance and technology.
+              </p>
+              <Link href="/about" style={buttonStyle}>
+                Learn More →
+              </Link>
+            </div>
+            {/* Right - Image */}
+            <div style={{ flex: '1 1 45%', minWidth: '300px' }}>
+              <Image
+                src="/images/about.png"
+                alt="About Sophos Technology Consultancy"
+                width={1080}
+                height={1080}
+                style={{ width: '100%', height: 'auto' }}
+              />
+            </div>
           </div>
-          <p
-            style={{
-              fontSize: '14px',
-              fontWeight: 500,
-              lineHeight: '23.8px',
-              color: '#666666',
-              maxWidth: '800px',
-              margin: '0 auto',
-              textAlign: 'center',
-            }}
-          >
-            At Sophos Technology Consultancy, we are passionate about harnessing the power of technology to revolutionize the finance, payments, and fintech industries. With our team of skilled developers, industry experts, and strategic thinkers, we deliver cutting-edge software solutions that drive efficiency, innovation, and growth. Our client-centric approach ensures that we understand your unique challenges and objectives, allowing us to craft tailored solutions that exceed your expectations. As your trusted technology partner, we are committed to helping you navigate the digital landscape, seize new opportunities, and achieve long-term success in the ever-evolving world of finance and technology.
-          </p>
         </div>
       </section>
 
-      {/* Projects Section - white */}
-      <section style={{ padding: '51.2px 0' }}>
+      {/* Projects Section - green bg, 2 columns with image */}
+      <section style={{ backgroundColor: '#25e89d', padding: '51.2px 0' }}>
         <div style={containerStyle}>
-          <div style={{ textAlign: 'center', marginBottom: '30px' }}>
-            <h2>Projects</h2>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '40px', flexWrap: 'wrap' as const }}>
+            {/* Left - Image */}
+            <div style={{ flex: '1 1 45%', minWidth: '300px' }}>
+              <Image
+                src="/images/projects.png"
+                alt="Our Projects"
+                width={1080}
+                height={1080}
+                style={{ width: '100%', height: 'auto' }}
+              />
+            </div>
+            {/* Right - Text */}
+            <div style={{ flex: '1 1 45%', minWidth: '300px' }}>
+              <h2 style={{ marginBottom: '20px' }}>Projects</h2>
+              <p
+                style={{
+                  fontSize: '14px',
+                  fontWeight: 500,
+                  lineHeight: '23.8px',
+                  color: '#666666',
+                  marginBottom: '15px',
+                }}
+              >
+                We&apos;ve had the privilege of working on groundbreaking projects that showcase our expertise. From developing secure and scalable banking solutions to integrating seamless payment gateways, our portfolio demonstrates our commitment to delivering cutting-edge technology that drives success for our clients.
+              </p>
+              <p
+                style={{
+                  fontSize: '14px',
+                  fontWeight: 500,
+                  lineHeight: '23.8px',
+                  color: '#666666',
+                  marginBottom: '25px',
+                }}
+              >
+                Explore our featured projects to see how we&apos;ve helped businesses like yours transform their operations, enhance customer experiences, and stay ahead in the rapidly evolving digital landscape.
+              </p>
+              <Link href="/projects" style={buttonStyle}>
+                Learn More →
+              </Link>
+            </div>
           </div>
-          <p
-            style={{
-              fontSize: '14px',
-              fontWeight: 500,
-              lineHeight: '23.8px',
-              color: '#666666',
-              maxWidth: '800px',
-              margin: '0 auto 30px',
-              textAlign: 'center',
-            }}
-          >
-            We&apos;ve had the privilege of working on groundbreaking projects that showcase our expertise. From developing secure and scalable banking solutions to integrating seamless payment gateways, our portfolio demonstrates our commitment to delivering cutting-edge technology that drives success for our clients.
-          </p>
         </div>
       </section>
 
-      {/* CTA Section - accent green */}
+      {/* Solutions Section - white, 2 columns with image */}
+      <section style={{ padding: '4% 0' }}>
+        <div style={containerStyle}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '40px', flexWrap: 'wrap' as const }}>
+            {/* Left - Text */}
+            <div style={{ flex: '1 1 45%', minWidth: '300px' }}>
+              <h2 style={{ marginBottom: '20px' }}>Solutions driving your success</h2>
+              <p
+                style={{
+                  fontSize: '14px',
+                  fontWeight: 500,
+                  lineHeight: '23.8px',
+                  color: '#666666',
+                  marginBottom: '15px',
+                }}
+              >
+                Sophos Technology Consultancy empowers finance, payments, and fintech businesses with innovative software development, strategic consulting, and cloud expertise. Let our team help you navigate the digital landscape and achieve your goals.
+              </p>
+              <p
+                style={{
+                  fontSize: '14px',
+                  fontWeight: 500,
+                  lineHeight: '23.8px',
+                  color: '#666666',
+                  marginBottom: '25px',
+                }}
+              >
+                Contact us today to start your transformation!
+              </p>
+              <Link href="/contact" style={buttonStyle}>
+                Contact Us →
+              </Link>
+            </div>
+            {/* Right - Image */}
+            <div style={{ flex: '1 1 45%', minWidth: '300px' }}>
+              <Image
+                src="/images/solutions.png"
+                alt="Solutions"
+                width={1080}
+                height={1080}
+                style={{ width: '100%', height: 'auto' }}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Blog Section - green bg */}
       <section style={{ backgroundColor: '#25e89d', padding: '51.2px 0' }}>
         <div style={{ ...containerStyle, textAlign: 'center' as const }}>
-          <h2 style={{ marginBottom: '20px' }}>Solutions driving your success</h2>
-          <p
-            style={{
-              fontSize: '14px',
-              fontWeight: 500,
-              lineHeight: '23.8px',
-              color: '#121212',
-              maxWidth: '800px',
-              margin: '0 auto 30px',
-            }}
-          >
-            Sophos Technology Consultancy empowers finance, payments, and fintech businesses with innovative software development, strategic consulting, and cloud expertise. Let our team help you navigate the digital landscape and achieve your goals. Contact us today to start your transformation!
-          </p>
-          <Link href="/contact" style={buttonStyle}>
-            Get Started →
-          </Link>
-        </div>
-      </section>
-
-      {/* Blog Teaser - white */}
-      <section style={{ padding: '4% 0' }}>
-        <div style={{ ...containerStyle, textAlign: 'center' as const }}>
-          <h2>Our Blog</h2>
-          <p
-            style={{
-              fontFamily: 'var(--font-inter), Inter, Helvetica, Arial, sans-serif',
-              fontSize: '16px',
-              fontWeight: 500,
-              color: '#121212',
-              lineHeight: '28.8px',
-              marginTop: '15px',
-              maxWidth: '600px',
-              marginLeft: 'auto',
-              marginRight: 'auto',
-            }}
-          >
-            Stay updated with the latest insights in fintech, payments, and software development.
-          </p>
-          <div style={{ marginTop: '30px' }}>
+          <h2 style={{ marginBottom: '20px' }}>Our Blog</h2>
+          <div style={{ marginBottom: '30px' }}>
             <Link href="/blog" style={buttonStyle}>
-              Read Our Blog →
+              View All →
             </Link>
+          </div>
+          {/* Blog post previews */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '30px', textAlign: 'left' as const, marginTop: '30px' }}>
+            {[
+              { title: 'Unlocking Business Potential Through Cutting-Edge Software Development', date: 'Mar 20, 2024', excerpt: "In today's fast-paced digital world, businesses in the finance, payments, and fintech industries..." },
+              { title: 'Streamlining Payments: The Power of Seamless Payment Gateway Integration', date: 'Mar 7, 2024', excerpt: 'In the world of e-commerce and online transactions, a seamless payment experience is crucial for...' },
+              { title: 'Unlocking the Power: Strategies for Cloud Migration and Optimization', date: 'Feb 21, 2024', excerpt: "In today's fast-paced, data-driven business environment, cloud computing has emerged as a..." },
+            ].map((post, i) => (
+              <div key={i} style={{ backgroundColor: '#ffffff', borderRadius: '0px', overflow: 'hidden' }}>
+                <div style={{ padding: '20px' }}>
+                  <h4 style={{ fontSize: '18px', fontWeight: 700, lineHeight: '1.4em', color: '#121212', marginBottom: '10px' }}>
+                    {post.title}
+                  </h4>
+                  <p style={{ fontSize: '12px', color: '#999', marginBottom: '10px' }}>
+                    by sophostc | {post.date} |
+                  </p>
+                  <p style={{ fontSize: '14px', fontWeight: 500, lineHeight: '23.8px', color: '#666666' }}>
+                    {post.excerpt}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
