@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Us",
+  title: "About Us | Sophos Technology Consultancy LLC",
 };
 
 export default function AboutLayout({
