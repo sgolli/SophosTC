@@ -40,12 +40,12 @@ export default function HomePage() {
   ];
 
   return (
-    <>
+    <div style={{ paddingTop: '94px' }}>
       <HeroSection />
 
       {/* Services Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section style={{ paddingTop: '51px', paddingBottom: '51px' }} className="bg-gray-50">
+        <div className="mx-auto px-4 sm:px-6 lg:px-8" style={{ maxWidth: '1080px', width: '80%' }}>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -53,7 +53,7 @@ export default function HomePage() {
             transition={{ duration: 0.5 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Services</h2>
+            <h2 style={{ fontSize: '60px', lineHeight: '1em', fontWeight: 700, color: '#121212' }} className="mb-4">Services</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Empowering finance through technology, innovation, and expertise.
             </p>
@@ -74,8 +74,8 @@ export default function HomePage() {
       </section>
 
       {/* About Section */}
-      <section className="py-20 bg-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section style={{ paddingTop: '51px', paddingBottom: '51px' }} className="bg-white">
+        <div className="mx-auto px-4 sm:px-6 lg:px-8" style={{ maxWidth: '1080px', width: '80%' }}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -83,7 +83,7 @@ export default function HomePage() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">About Us</h2>
+              <h2 style={{ fontSize: '60px', lineHeight: '1em', fontWeight: 700, color: '#121212' }} className="mb-6">About Us</h2>
               <p className="text-gray-600 leading-relaxed mb-6">
                 At Sophos Technology Consultancy, we are passionate about harnessing the power of technology to revolutionize the finance, payments, and fintech industries. With our team of skilled developers, industry experts, and strategic thinkers, we deliver cutting-edge software solutions that drive efficiency, innovation, and growth.
               </p>
@@ -138,8 +138,8 @@ export default function HomePage() {
       </section>
 
       {/* Projects Teaser */}
-      <section className="py-20 bg-gray-50">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section style={{ paddingTop: '51px', paddingBottom: '51px' }} className="bg-gray-50">
+        <div className="mx-auto px-4 sm:px-6 lg:px-8" style={{ maxWidth: '1080px', width: '80%' }}>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -147,7 +147,7 @@ export default function HomePage() {
             transition={{ duration: 0.5 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">Projects</h2>
+            <h2 style={{ fontSize: '60px', lineHeight: '1em', fontWeight: 700, color: '#121212' }} className="mb-6">Projects</h2>
             <p className="text-gray-600 leading-relaxed max-w-4xl mx-auto mb-8">
               We've had the privilege of working on groundbreaking projects that showcase our expertise. From developing secure and scalable banking solutions to integrating seamless payment gateways, our portfolio demonstrates our commitment to delivering cutting-edge technology that drives success for our clients. Explore our featured projects to see how we've helped businesses like yours transform their operations, enhance customer experiences, and stay ahead in the rapidly evolving digital landscape.
             </p>
@@ -162,8 +162,8 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-primary via-secondary to-primary">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section style={{ paddingTop: '51px', paddingBottom: '51px' }} className="bg-gradient-to-r from-primary via-secondary to-primary">
+        <div className="mx-auto px-4 sm:px-6 lg:px-8" style={{ maxWidth: '1080px', width: '80%' }}>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -171,7 +171,7 @@ export default function HomePage() {
             transition={{ duration: 0.5 }}
             className="text-center text-white"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+            <h2 style={{ fontSize: '60px', lineHeight: '1em', fontWeight: 700 }} className="mb-6 text-white">
               Solutions driving your success
             </h2>
             <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto text-gray-200">
@@ -186,6 +186,6 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
-    </>
+    </div>
   );
 }

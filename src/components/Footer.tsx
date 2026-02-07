@@ -3,17 +3,18 @@ import Image from 'next/image';
 
 export default function Footer() {
   return (
-    <footer className="bg-primary text-white">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+    <footer className="bg-primary text-white" style={{ paddingTop: '51px', paddingBottom: '51px' }}>
+      <div className="mx-auto px-4 sm:px-6 lg:px-8" style={{ maxWidth: '1080px', width: '80%' }}>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Column 1: Logo & Tagline */}
           <div>
             <Image
-              src="/images/logo.png"
-              alt="SophosTC Logo"
-              width={180}
-              height={79}
-              className="h-12 w-auto mb-4 brightness-0 invert"
+              src="https://sophostc.com/wp-content/uploads/2024/03/STC-Logo-Transparent-1.png"
+              alt="Sophos Technology Consultancy LLC"
+              width={193}
+              height={85}
+              className="mb-4 brightness-0 invert"
+              style={{ maxHeight: '90%', width: 'auto' }}
             />
             <p className="text-sm text-gray-300">
               Your premier partner for cutting-edge software solutions in finance, payments, and fintech.

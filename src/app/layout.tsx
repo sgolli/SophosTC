@@ -1,10 +1,25 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Open_Sans, Roboto, Roboto_Flex } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const openSans = Open_Sans({ 
+  subsets: ["latin"], 
+  variable: "--font-open-sans",
+  weight: ["400", "500", "600", "700"]
+});
+
+const roboto = Roboto({ 
+  subsets: ["latin"], 
+  variable: "--font-roboto",
+  weight: ["400", "500", "700", "900"]
+});
+
+const robotoFlex = Roboto_Flex({ 
+  subsets: ["latin"], 
+  variable: "--font-roboto-flex"
+});
 
 export const metadata: Metadata = {
   title: "SophosTC | Software Solutions for Finance, Payments & Fintech",
@@ -19,7 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} antialiased`}>
+      <body className={`${openSans.variable} ${roboto.variable} ${robotoFlex.variable} antialiased`}>
         <Header />
         <main>{children}</main>
         <Footer />

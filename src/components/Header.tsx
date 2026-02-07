@@ -16,35 +16,51 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-sm">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-20 items-center justify-between">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm" style={{ height: '94px' }}>
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-full">
+        <div className="flex h-full items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
-              src="/images/logo.png"
-              alt="SophosTC Logo"
-              width={180}
-              height={79}
-              className="h-12 w-auto"
+              src="https://sophostc.com/wp-content/uploads/2024/03/STC-Logo-Transparent-1.png"
+              alt="Sophos Technology Consultancy LLC"
+              width={193}
+              height={85}
+              style={{ maxHeight: '90%', width: 'auto' }}
               priority
             />
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-8" style={{ fontFamily: 'var(--font-roboto-flex)' }}>
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
+                className="hover:text-primary transition-colors"
+                style={{ 
+                  fontSize: '18px', 
+                  fontWeight: 600, 
+                  letterSpacing: '1px',
+                  color: '#333333'
+                }}
               >
                 {link.label}
               </Link>
             ))}
             <Link
               href="/contact"
-              className="ml-4 rounded-md bg-accent px-6 py-2.5 text-sm font-semibold text-white hover:bg-accent/90 transition-colors"
+              className="ml-4 transition-colors"
+              style={{
+                fontSize: '16px',
+                fontWeight: 500,
+                letterSpacing: '1px',
+                padding: '15px 45px 15px 35px',
+                backgroundColor: '#242424',
+                color: '#ffffff',
+                borderRadius: '14px',
+                border: '0px solid #ffffff'
+              }}
             >
               Get Started
             </Link>

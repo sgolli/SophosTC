@@ -2,10 +2,13 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #333333;
+  --foreground: #666666;
   --primary: #272a49;
   --accent: #25e89d;
   --secondary: #2ea3f2;
+  --text-color: #666666;
+  --heading-color: #121212;
+  --nav-color: #333333;
 }
 
 @theme inline {
@@ -14,19 +17,35 @@
   --color-primary: var(--primary);
   --color-accent: var(--accent);
   --color-secondary: var(--secondary);
-  --font-sans: var(--font-inter);
+  --font-sans: var(--font-open-sans);
+  --font-heading: var(--font-roboto);
+  --font-nav: var(--font-roboto-flex);
 }
 
 body {
   background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
-  line-height: 1.7;
+  color: var(--text-color);
+  font-family: var(--font-open-sans), Arial, sans-serif;
+  line-height: 1.7em;
   font-size: 14px;
+  font-weight: 500;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: var(--primary);
+  color: var(--heading-color);
+  font-family: var(--font-roboto), Helvetica, Arial, Lucida, sans-serif;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 65px;
+  line-height: 1.1em;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 60px;
+  line-height: 1em;
   font-weight: 700;
 }
 
