@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'About Us | Sophos Technology Consultancy LLC',
+  title: 'About Us',
   description: 'Learn about Sophos Technology Consultancy, a UAE-based software development company specializing in finance, payments, and fintech.',
 };
 
@@ -11,8 +11,8 @@ export default function AboutPage() {
       {/* Hero banner */}
       <section
         style={{
-          backgroundColor: '#25e89d',
-          padding: '76.8px 0',
+          background: 'linear-gradient(1deg, rgb(142, 235, 226) 0%, rgb(37, 232, 157) 100%)',
+          padding: '38.4px 0 51.2px',
         }}
       >
         <div style={{maxWidth:"1080px",width:"80%",margin:"0 auto",textAlign:"center"}}>
