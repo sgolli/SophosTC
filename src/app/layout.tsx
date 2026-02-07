@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Open_Sans, Roboto, Roboto_Flex } from "next/font/google";
+import { Open_Sans, Roboto, Roboto_Flex, Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -18,13 +18,25 @@ const roboto = Roboto({
 
 const robotoFlex = Roboto_Flex({ 
   subsets: ["latin"], 
-  variable: "--font-roboto-flex"
+  variable: "--font-roboto-flex",
+  weight: ["600"]
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  weight: ["400", "500"]
 });
 
 export const metadata: Metadata = {
-  title: "SophosTC | Software Solutions for Finance, Payments & Fintech",
-  description: "Your premier partner for cutting-edge software solutions in finance, payments, and fintech. UAE-based software development company delivering innovative solutions.",
+  title: "Sophos Technology Consultancy LLC |",
+  description: "Your premier partner for cutting-edge software solutions in finance, payments, and fintech.",
   keywords: "fintech, software development, payment gateway, finance technology, UAE, consulting",
+  openGraph: {
+    title: "Sophos Technology Consultancy LLC",
+    description: "Your premier partner for cutting-edge software solutions in finance, payments, and fintech.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -34,9 +46,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${openSans.variable} ${roboto.variable} ${robotoFlex.variable} antialiased`}>
+      <body className={`${openSans.variable} ${roboto.variable} ${robotoFlex.variable} ${inter.variable}`}>
         <Header />
-        <main>{children}</main>
+        <main style={{ paddingTop: '94px' }}>{children}</main>
         <Footer />
       </body>
     </html>

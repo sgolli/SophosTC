@@ -1,24 +1,70 @@
 'use client';
 
-import { motion } from 'framer-motion';
-
 interface ProjectCardProps {
   title: string;
   description: string;
-  index: number;
+  tags: string[];
 }
 
-export default function ProjectCard({ title, description, index }: ProjectCardProps) {
+export default function ProjectCard({ title, description, tags }: ProjectCardProps) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-all hover:scale-105"
+    <div
+      style={{
+        backgroundColor: '#ffffff',
+        border: '1px solid #e5e5e5',
+        borderRadius: '4px',
+        padding: '30px',
+        transition: 'all 0.3s ease',
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.boxShadow = '0 4px 18px rgba(0,0,0,0.1)';
+        e.currentTarget.style.transform = 'translateY(-2px)';
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.boxShadow = 'none';
+        e.currentTarget.style.transform = 'translateY(0)';
+      }}
     >
-      <h3 className="text-xl font-bold text-primary mb-4">{title}</h3>
-      <p className="text-gray-600 leading-relaxed">{description}</p>
-    </motion.div>
+      <h4
+        style={{
+          fontFamily: 'var(--font-roboto), Roboto, Helvetica, Arial, sans-serif',
+          fontSize: '18px',
+          fontWeight: 700,
+          lineHeight: '1.4em',
+          color: '#121212',
+          marginBottom: '15px',
+        }}
+      >
+        {title}
+      </h4>
+      <p
+        style={{
+          fontSize: '14px',
+          fontWeight: 500,
+          lineHeight: '23.8px',
+          color: '#666666',
+          marginBottom: '20px',
+        }}
+      >
+        {description}
+      </p>
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+        {tags.map((tag) => (
+          <span
+            key={tag}
+            style={{
+              fontSize: '12px',
+              fontWeight: 600,
+              color: '#25e89d',
+              backgroundColor: 'rgba(37, 232, 157, 0.1)',
+              padding: '4px 12px',
+              borderRadius: '3px',
+            }}
+          >
+            {tag}
+          </span>
+        ))}
+      </div>
+    </div>
   );
 }

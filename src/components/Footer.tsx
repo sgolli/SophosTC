@@ -3,8 +3,8 @@ import Image from 'next/image';
 
 export default function Footer() {
   return (
-    <footer className="bg-primary text-white" style={{ paddingTop: '51px', paddingBottom: '51px' }}>
-      <div className="mx-auto px-4 sm:px-6 lg:px-8" style={{ maxWidth: '1080px', width: '80%' }}>
+    <footer className="bg-primary text-white" style={{ paddingTop: '51.2px', paddingBottom: '51.2px' }}>
+      <div className="mx-auto" style={{ maxWidth: '1080px', paddingLeft: '4%', paddingRight: '4%' }}>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Column 1: Logo & Tagline */}
           <div>
@@ -14,9 +14,9 @@ export default function Footer() {
               width={193}
               height={85}
               className="mb-4 brightness-0 invert"
-              style={{ maxHeight: '90%', width: 'auto' }}
+              style={{ maxHeight: '90%', width: 'auto', height: 'auto' }}
             />
-            <p className="text-sm text-gray-300">
+            <p style={{ fontSize: '14px', fontWeight: 500, color: 'rgba(255, 255, 255, 0.8)', lineHeight: '23.8px' }}>
               Your premier partner for cutting-edge software solutions in finance, payments, and fintech.
             </p>
           </div>
@@ -26,27 +26,67 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4 text-white">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/services" className="text-sm text-gray-300 hover:text-accent transition-colors">
+                <Link 
+                  href="/services" 
+                  className="hover:opacity-80 transition-opacity"
+                  style={{
+                    color: 'rgb(46, 163, 242)',
+                    fontSize: '14px',
+                    fontWeight: 500
+                  }}
+                >
                   Services
                 </Link>
               </li>
               <li>
-                <Link href="/projects" className="text-sm text-gray-300 hover:text-accent transition-colors">
+                <Link 
+                  href="/projects" 
+                  className="hover:opacity-80 transition-opacity"
+                  style={{
+                    color: 'rgb(46, 163, 242)',
+                    fontSize: '14px',
+                    fontWeight: 500
+                  }}
+                >
                   Projects
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-sm text-gray-300 hover:text-accent transition-colors">
+                <Link 
+                  href="/about" 
+                  className="hover:opacity-80 transition-opacity"
+                  style={{
+                    color: 'rgb(46, 163, 242)',
+                    fontSize: '14px',
+                    fontWeight: 500
+                  }}
+                >
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="text-sm text-gray-300 hover:text-accent transition-colors">
+                <Link 
+                  href="/blog" 
+                  className="hover:opacity-80 transition-opacity"
+                  style={{
+                    color: 'rgb(46, 163, 242)',
+                    fontSize: '14px',
+                    fontWeight: 500
+                  }}
+                >
                   Blog
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-sm text-gray-300 hover:text-accent transition-colors">
+                <Link 
+                  href="/contact" 
+                  className="hover:opacity-80 transition-opacity"
+                  style={{
+                    color: 'rgb(46, 163, 242)',
+                    fontSize: '14px',
+                    fontWeight: 500
+                  }}
+                >
                   Contact
                 </Link>
               </li>
@@ -56,7 +96,7 @@ export default function Footer() {
           {/* Column 3: Contact Info */}
           <div>
             <h3 className="text-lg font-semibold mb-4 text-white">Get In Touch</h3>
-            <p className="text-sm text-gray-300 mb-2">
+            <p style={{ fontSize: '14px', fontWeight: 500, color: 'rgba(255, 255, 255, 0.8)', lineHeight: '23.8px', marginBottom: '8px' }}>
               UAE-based software development company specializing in finance, payments, and fintech solutions.
             </p>
             <div className="flex gap-4 mt-4">
@@ -88,7 +128,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
-          <p className="text-sm text-gray-400">
+          <p style={{ fontSize: '14px', color: 'rgba(255, 255, 255, 0.6)' }}>
             © {new Date().getFullYear()} Sophos Technology Consultancy LLC. All rights reserved.
           </p>
         </div>

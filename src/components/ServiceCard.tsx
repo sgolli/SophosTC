@@ -1,28 +1,65 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { ReactNode } from 'react';
 
 interface ServiceCardProps {
-  icon: React.ReactNode;
+  icon: ReactNode;
   title: string;
   description: string;
-  index: number;
+  index?: number;
 }
 
-export default function ServiceCard({ icon, title, description, index }: ServiceCardProps) {
+export default function ServiceCard({ icon, title, description }: ServiceCardProps) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: index * 0.2 }}
-      className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
+    <div
+      style={{
+        backgroundColor: '#ffffff',
+        borderRadius: '0px',
+        padding: '30px',
+        textAlign: 'left',
+        transition: 'all 0.3s ease',
+      }}
     >
-      <div className="mb-6 text-accent">
+      {/* Icon */}
+      <div
+        style={{
+          marginBottom: '20px',
+          color: '#25e89d',
+        }}
+      >
         {icon}
       </div>
-      <h3 className="text-xl font-bold text-primary mb-4">{title}</h3>
-      <p className="text-gray-600 leading-relaxed">{description}</p>
-    </motion.div>
+
+      {/* Title */}
+      <h4
+        style={{
+          fontFamily: 'var(--font-roboto), Roboto, Helvetica, Arial, sans-serif',
+          fontSize: '18px',
+          fontWeight: 700,
+          lineHeight: '1.4em',
+          color: '#121212',
+          marginBottom: '10px',
+        }}
+      >
+        {title}
+      </h4>
+
+      {/* Description */}
+      <p
+        style={{
+          fontSize: '14px',
+          fontWeight: 500,
+          lineHeight: '23.8px',
+          color: '#666666',
+        }}
+      >
+        {description}
+      </p>
+
+      {/* Arrow link */}
+      <div style={{ marginTop: '20px' }}>
+        <span style={{ color: '#25e89d', fontSize: '24px', cursor: 'pointer' }}>→</span>
+      </div>
+    </div>
   );
 }

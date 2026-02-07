@@ -6,12 +6,9 @@
   --primary: #272a49;
   --accent: #25e89d;
   --secondary: #2ea3f2;
-  --text-color: rgb(102, 102, 102);
-  --heading-color: rgb(18, 18, 18);
+  --text-color: #666666;
+  --heading-color: #121212;
   --nav-color: #333333;
-  --footer-link: rgb(46, 163, 242);
-  --dark-bg: rgb(36, 36, 36);
-  --gray-bg: rgb(242, 242, 242);
 }
 
 @theme inline {
@@ -23,15 +20,6 @@
   --font-sans: var(--font-open-sans);
   --font-heading: var(--font-roboto);
   --font-nav: var(--font-roboto-flex);
-  --font-inter: var(--font-inter);
-  
-  /* Exact spacing values from original site */
-  --spacing-header: 94px;
-  --spacing-hero-top: 76.8px;
-  --spacing-hero-bottom: 128px;
-  --spacing-section: 51.2px;
-  --spacing-section-percent: 4%;
-  --spacing-container: 25.6px;
 }
 
 * {
@@ -43,39 +31,155 @@
 body {
   background: var(--background);
   color: var(--text-color);
-  font-family: var(--font-open-sans), Arial, sans-serif;
+  font-family: var(--font-open-sans), "Open Sans", Arial, sans-serif;
+  line-height: 1.7em;
   font-size: 14px;
   font-weight: 500;
-  line-height: 23.8px;
 }
 
 h1, h2, h3, h4, h5, h6 {
   color: var(--heading-color);
-  font-family: var(--font-roboto), Helvetica, Arial, Lucida, sans-serif;
+  font-family: var(--font-roboto), Roboto, Helvetica, Arial, Lucida, sans-serif;
 }
 
 h1 {
-  font-family: var(--font-roboto);
   font-size: 65px;
-  font-weight: 900;
   line-height: 71.5px;
-  color: #000000;
+  font-weight: 900;
   letter-spacing: 1.3px;
+  color: #000000;
 }
 
 h2 {
-  font-family: var(--font-roboto);
   font-size: 60px;
-  font-weight: 700;
-  color: var(--heading-color);
   line-height: 60px;
+  font-weight: 700;
   letter-spacing: 1px;
+  color: #121212;
 }
 
-.tagline {
-  font-family: var(--font-inter);
+h3 {
+  font-size: 26px;
+  line-height: 1.2em;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 18px;
+  line-height: 1.4em;
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  color: var(--secondary);
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+/* Divi-style container */
+.et-container {
+  max-width: 1080px;
+  width: 80%;
+  margin: 0 auto;
+  padding: 25.6px 0;
+}
+
+/* Divi-style button */
+.et-button {
+  font-family: var(--font-roboto), Roboto, Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-weight: 500;
-  color: var(--heading-color);
+  color: #ffffff;
+  background-color: #242424;
+  padding: 15px 45px 15px 35px;
+  border-radius: 14px;
+  border: 0px solid #ffffff;
+  letter-spacing: 1px;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  position: relative;
+}
+
+.et-button:hover {
+  background-color: #333333;
+  opacity: 1;
+  color: #ffffff;
+}
+
+.et-button::after {
+  content: "→";
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+/* Section styles matching Divi */
+.section-white {
+  background-color: #ffffff;
+  padding: 51.19px 0;
+}
+
+.section-gray {
+  background-color: #f2f2f2;
+  padding: 51.19px 0;
+}
+
+.section-accent {
+  background-color: #25e89d;
+  padding: 51.19px 0;
+}
+
+/* Tagline / subtitle text */
+.tagline {
+  font-family: var(--font-inter), Inter, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #121212;
   line-height: 28.8px;
+}
+
+/* Footer link color */
+.footer-link {
+  color: #2ea3f2;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.footer-link:hover {
+  color: #25e89d;
+  opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+  h1 {
+    font-size: 36px;
+    line-height: 42px;
+  }
+  h2 {
+    font-size: 32px;
+    line-height: 36px;
+  }
+  .et-container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 28px;
+    line-height: 34px;
+  }
+  h2 {
+    font-size: 26px;
+    line-height: 30px;
+  }
+  .et-container {
+    width: 95%;
+    padding: 15px 0;
+  }
 }
