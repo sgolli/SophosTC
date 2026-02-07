@@ -9,13 +9,13 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero banner */}
-      <section
+      <section className="r-hero"
         style={{
           background: 'linear-gradient(1deg, rgb(142, 235, 226) 0%, rgb(37, 232, 157) 100%)',
           padding: '38.4px 0 51.2px',
         }}
       >
-        <div style={{maxWidth:"1080px",width:"80%",margin:"0 auto",textAlign:"center"}}>
+        <div className="r-container" style={{maxWidth:"1080px",width:"80%",margin:"0 auto",textAlign:"center"}}>
           <h1
             style={{
               fontFamily: 'var(--font-roboto), Roboto, Helvetica, Arial, sans-serif',
@@ -33,7 +33,7 @@ export default function AboutPage() {
 
       {/* Main content */}
       <section style={{padding:"51.2px 0",backgroundColor:"#ffffff"}}>
-        <div style={{maxWidth:"1080px",width:"80%",margin:"0 auto"}}>
+        <div className="r-container" style={{maxWidth:"1080px",width:"80%",margin:"0 auto"}}>
           <p
             style={{
               fontSize: '14px',
@@ -72,7 +72,7 @@ export default function AboutPage() {
 
       {/* Values / Expertise */}
       <section style={{padding:"51.2px 0",backgroundColor:"#f2f2f2"}}>
-        <div style={{maxWidth:"1080px",width:"80%",margin:"0 auto"}}>
+        <div className="r-container" style={{maxWidth:"1080px",width:"80%",margin:"0 auto"}}>
           <h2 style={{ textAlign: 'center', marginBottom: '40px' }}>Our Expertise</h2>
           <div
             style={{
@@ -118,7 +118,7 @@ export default function AboutPage() {
 
       {/* CTA */}
       <section style={{padding:"51.2px 0",backgroundColor:"#25e89d"}}>
-        <div style={{maxWidth:"1080px",width:"80%",margin:"0 auto",textAlign:"center"}}>
+        <div className="r-container" style={{maxWidth:"1080px",width:"80%",margin:"0 auto",textAlign:"center"}}>
           <h2 style={{ marginBottom: '20px' }}>Let&apos;s work together</h2>
           <p
             style={{

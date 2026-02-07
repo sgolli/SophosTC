@@ -10,8 +10,8 @@ const containerStyle = {
 export default function Footer() {
   return (
     <footer style={{ backgroundColor: '#ffffff', padding: '60px 0 0 0' }}>
-      <div style={containerStyle}>
-        <div style={{ display: 'flex', flexWrap: 'wrap' as const, gap: '40px', justifyContent: 'space-between' }}>
+      <div className="r-container" style={containerStyle}>
+        <div className="r-footer-cols" style={{ display: 'flex', flexWrap: 'wrap' as const, gap: '40px', justifyContent: 'space-between' }}>
           {/* Column 1: Logo & Description */}
           <div style={{ flex: '1 1 350px', maxWidth: '400px' }}>
             <Image
@@ -86,7 +86,7 @@ export default function Footer() {
 
         {/* Divider */}
         <div style={{ borderTop: '1px solid #e0e0e0', marginTop: '40px', paddingTop: '25px', paddingBottom: '25px' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap' as const, gap: '15px' }}>
+          <div className="r-footer-bottom" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap' as const, gap: '15px' }}>
             <p style={{ fontSize: '14px', color: '#474747' }}>
               All Rights Reserved | <Link href="/" style={{ color: '#000', fontWeight: 600, textDecoration: 'none' }}>Sophos Technology Consultancy LLC</Link> | © {new Date().getFullYear()}
             </p>

@@ -17,6 +17,7 @@ export default function Header() {
 
   return (
     <header
+      className="r-header"
       style={{
         position: 'fixed',
         top: 0,
@@ -29,6 +30,7 @@ export default function Header() {
       }}
     >
       <div
+        className="r-container"
         style={{
           maxWidth: '1080px',
           width: '80%',
@@ -40,7 +42,7 @@ export default function Header() {
         }}
       >
         {/* Logo */}
-        <Link href="/" style={{ display: 'flex', alignItems: 'center', flexShrink: 0 }}>
+        <Link href="/" className="r-header-logo" style={{ display: 'flex', alignItems: 'center', flexShrink: 0 }}>
           <Image
             src="/images/logo.png"
             alt="Sophos Technology Consultancy LLC"

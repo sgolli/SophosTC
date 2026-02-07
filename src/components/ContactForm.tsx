@@ -19,7 +19,7 @@ export default function ContactForm() {
   return (
     <form onSubmit={handleSubmit}>
       <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-        <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
+        <div className="r-form-row" style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
           <input
             type="text"
             placeholder="Name"

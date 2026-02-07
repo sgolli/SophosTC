@@ -49,13 +49,13 @@ export default function ProjectsPage() {
   return (
     <>
       {/* Hero banner */}
-      <section
+      <section className="r-hero"
         style={{
           background: 'linear-gradient(1deg, rgb(142, 235, 226) 0%, rgb(37, 232, 157) 100%)',
           padding: '38.4px 0 51.2px',
         }}
       >
-        <div style={{maxWidth:"1080px",width:"80%",margin:"0 auto",textAlign:"center"}}>
+        <div className="r-container" style={{maxWidth:"1080px",width:"80%",margin:"0 auto",textAlign:"center"}}>
           <h1
             style={{
               fontFamily: 'var(--font-roboto), Roboto, Helvetica, Arial, sans-serif',
@@ -76,7 +76,7 @@ export default function ProjectsPage() {
 
       {/* Projects grid */}
       <section style={{padding:"51.2px 0",backgroundColor:"#ffffff"}}>
-        <div style={{maxWidth:"1080px",width:"80%",margin:"0 auto"}}>
+        <div className="r-container" style={{maxWidth:"1080px",width:"80%",margin:"0 auto"}}>
           <div
             style={{
               display: 'grid',
@@ -98,7 +98,7 @@ export default function ProjectsPage() {
 
       {/* CTA */}
       <section style={{padding:"51.2px 0",backgroundColor:"#25e89d"}}>
-        <div style={{maxWidth:"1080px",width:"80%",margin:"0 auto",textAlign:"center"}}>
+        <div className="r-container" style={{maxWidth:"1080px",width:"80%",margin:"0 auto",textAlign:"center"}}>
           <h2 style={{ marginBottom: '20px' }}>Accelerate your business</h2>
           <p
             style={{

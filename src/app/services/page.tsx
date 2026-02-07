@@ -48,13 +48,13 @@ export default function ServicesPage() {
   return (
     <>
       {/* Hero banner */}
-      <section
+      <section className="r-hero"
         style={{
           background: 'linear-gradient(1deg, rgb(142, 235, 226) 0%, rgb(37, 232, 157) 100%)',
           padding: '38.4px 0 51.2px 0',
         }}
       >
-        <div style={{maxWidth:"1080px",width:"80%",margin:"0 auto",textAlign:"center"}}>
+        <div className="r-container" style={{maxWidth:"1080px",width:"80%",margin:"0 auto",textAlign:"center"}}>
           <h1
             style={{
               fontFamily: 'var(--font-roboto), Roboto, Helvetica, Arial, sans-serif',
@@ -75,14 +75,14 @@ export default function ServicesPage() {
 
       {/* Services */}
       {services.map((service, index) => (
-        <section
+        <section className="r-hero"
           key={index}
           style={{
             backgroundColor: index % 2 === 0 ? '#ffffff' : '#f2f2f2',
             padding: '51.19px 0',
           }}
         >
-          <div style={{maxWidth:"1080px",width:"80%",margin:"0 auto"}}>
+          <div className="r-container" style={{maxWidth:"1080px",width:"80%",margin:"0 auto"}}>
             <h2 style={{ marginBottom: '20px' }}>{service.title}</h2>
             <p
               style={{
@@ -119,7 +119,7 @@ export default function ServicesPage() {
 
       {/* CTA */}
       <section style={{padding:"51.2px 0",backgroundColor:"#25e89d"}}>
-        <div style={{maxWidth:"1080px",width:"80%",margin:"0 auto",textAlign:"center"}}>
+        <div className="r-container" style={{maxWidth:"1080px",width:"80%",margin:"0 auto",textAlign:"center"}}>
           <h2 style={{ marginBottom: '20px' }}>Ready to get started?</h2>
           <p
             style={{

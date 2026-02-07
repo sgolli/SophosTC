@@ -118,4 +118,124 @@ h2[style*="textAlign"]::after {
     font-size: 26px !important;
     line-height: 30px !important;
   }
+
+  /* Containers */
+  .r-container {
+    width: 95% !important;
+  }
+
+  /* Header */
+  .r-header {
+    height: 70px !important;
+  }
+  .r-header-logo img {
+    max-height: 60px !important;
+  }
+
+  /* Spacer after fixed header */
+  .r-spacer {
+    height: 70px !important;
+  }
+
+  /* Hero sections */
+  .r-hero {
+    padding: 30px 0 40px 0 !important;
+  }
+  .r-hero h1 {
+    font-size: 32px !important;
+    line-height: 38px !important;
+  }
+
+  /* Flex rows → stack */
+  .r-flex-row {
+    flex-direction: column !important;
+  }
+
+  /* Grids → single column */
+  .r-grid-3 {
+    grid-template-columns: 1fr !important;
+  }
+  .r-grid-2 {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Sections padding */
+  .r-section {
+    padding: 30px 0 !important;
+  }
+
+  /* Footer */
+  .r-footer-cols {
+    flex-direction: column !important;
+    gap: 30px !important;
+  }
+  .r-footer-cols > div {
+    max-width: 100% !important;
+    flex: 1 1 100% !important;
+  }
+  .r-footer-bottom {
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+
+  /* Buttons */
+  .r-btn {
+    display: block !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  /* Images */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Blog grid on homepage */
+  .r-blog-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Contact form inputs */
+  .r-form-row {
+    flex-direction: column !important;
+  }
+  .r-form-row input {
+    flex: 1 1 100% !important;
+    min-width: 100% !important;
+  }
+
+  /* Clip path sections - reduce angle on mobile */
+  .r-clip-section {
+    clip-path: polygon(0 4%, 100% 0, 100% 100%, 0 100%) !important;
+    padding-top: 50px !important;
+  }
+
+  /* h2 after divider */
+  h2::after {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px !important;
+    line-height: 30px !important;
+  }
+  h2 {
+    font-size: 22px !important;
+    line-height: 28px !important;
+  }
+  h3 {
+    font-size: 20px !important;
+  }
+
+  .r-container {
+    width: 92% !important;
+  }
+
+  .r-hero h1 {
+    font-size: 28px !important;
+    line-height: 34px !important;
+  }
 }

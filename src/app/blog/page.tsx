@@ -43,13 +43,13 @@ export default function BlogPage() {
   return (
     <>
       {/* Hero banner */}
-      <section
+      <section className="r-hero"
         style={{
           background: 'linear-gradient(1deg, rgb(142, 235, 226) 0%, rgb(37, 232, 157) 100%)',
           padding: '38.4px 0 51.2px',
         }}
       >
-        <div style={{maxWidth:"1080px",width:"80%",margin:"0 auto",textAlign:"center"}}>
+        <div className="r-container" style={{maxWidth:"1080px",width:"80%",margin:"0 auto",textAlign:"center"}}>
           <h1
             style={{
               fontFamily: 'var(--font-roboto), Roboto, Helvetica, Arial, sans-serif',
@@ -70,7 +70,7 @@ export default function BlogPage() {
 
       {/* Blog posts */}
       <section style={{padding:"51.2px 0",backgroundColor:"#ffffff"}}>
-        <div style={{maxWidth:"1080px",width:"80%",margin:"0 auto"}}>
+        <div className="r-container" style={{maxWidth:"1080px",width:"80%",margin:"0 auto"}}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '30px' }}>
             {posts.map((post, index) => (
               <article

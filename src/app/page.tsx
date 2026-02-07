@@ -63,8 +63,8 @@ export default function HomePage() {
       <HeroSection />
 
       {/* Services Section - gray bg */}
-      <section style={{ backgroundColor: '#f2f2f2', padding: '51.2px 0' }}>
-        <div style={containerStyle}>
+      <section className="r-section" style={{ backgroundColor: '#f2f2f2', padding: '51.2px 0' }}>
+        <div className="r-container" style={containerStyle}>
           <div style={{ textAlign: 'center', marginBottom: '50px' }}>
             <h2>Services</h2>
             <p
@@ -84,6 +84,7 @@ export default function HomePage() {
             </p>
           </div>
           <div
+            className="r-grid-3"
             style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(3, 1fr)',
@@ -106,8 +107,8 @@ export default function HomePage() {
 
       {/* About Section - white, 2 columns with image */}
       <section style={{ padding: '4% 0' }}>
-        <div style={containerStyle}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '40px', flexWrap: 'wrap' as const }}>
+        <div className="r-container" style={containerStyle}>
+          <div className="r-flex-row" style={{ display: 'flex', alignItems: 'center', gap: '40px', flexWrap: 'wrap' as const }}>
             {/* Left - Text */}
             <div style={{ flex: '1 1 45%', minWidth: '300px' }}>
               <h2 style={{ marginBottom: '20px' }}>About Us</h2>
@@ -152,9 +153,9 @@ export default function HomePage() {
       </section>
 
       {/* Projects Section - green bg with diagonal top */}
-      <section style={{ backgroundColor: '#25e89d', padding: '80px 0 51.2px 0', position: 'relative', clipPath: 'polygon(0 8%, 100% 0, 100% 100%, 0 100%)' }}>
-        <div style={containerStyle}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '40px', flexWrap: 'wrap' as const }}>
+      <section className="r-clip-section" style={{ backgroundColor: '#25e89d', padding: '80px 0 51.2px 0', position: 'relative', clipPath: 'polygon(0 8%, 100% 0, 100% 100%, 0 100%)' }}>
+        <div className="r-container" style={containerStyle}>
+          <div className="r-flex-row" style={{ display: 'flex', alignItems: 'center', gap: '40px', flexWrap: 'wrap' as const }}>
             {/* Left - Image */}
             <div style={{ flex: '1 1 45%', minWidth: '300px' }}>
               <Image
@@ -200,8 +201,8 @@ export default function HomePage() {
 
       {/* Solutions Section - white, 2 columns with image */}
       <section style={{ padding: '4% 0' }}>
-        <div style={containerStyle}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '40px', flexWrap: 'wrap' as const }}>
+        <div className="r-container" style={containerStyle}>
+          <div className="r-flex-row" style={{ display: 'flex', alignItems: 'center', gap: '40px', flexWrap: 'wrap' as const }}>
             {/* Left - Text */}
             <div style={{ flex: '1 1 45%', minWidth: '300px' }}>
               <h2 style={{ marginBottom: '20px' }}>Solutions driving your success</h2>
@@ -246,8 +247,8 @@ export default function HomePage() {
       </section>
 
       {/* Blog Section - green bg */}
-      <section style={{ backgroundColor: '#25e89d', padding: '51.2px 0' }}>
-        <div style={{ ...containerStyle, textAlign: 'center' as const }}>
+      <section className="r-section" style={{ backgroundColor: '#25e89d', padding: '51.2px 0' }}>
+        <div className="r-container" style={{ ...containerStyle, textAlign: 'center' as const }}>
           <h2 style={{ marginBottom: '20px' }}>Our Blog</h2>
           <div style={{ marginBottom: '30px' }}>
             <Link href="/blog" style={buttonStyle}>
@@ -255,7 +256,7 @@ export default function HomePage() {
             </Link>
           </div>
           {/* Blog post previews */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '30px', textAlign: 'left' as const, marginTop: '30px' }}>
+          <div className="r-blog-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '30px', textAlign: 'left' as const, marginTop: '30px' }}>
             {[
               { title: 'Unlocking Business Potential Through Cutting-Edge Software Development', date: 'Mar 20, 2024', excerpt: "In today's fast-paced digital world, businesses in the finance, payments, and fintech industries..." },
               { title: 'Streamlining Payments: The Power of Seamless Payment Gateway Integration', date: 'Mar 7, 2024', excerpt: 'In the world of e-commerce and online transactions, a seamless payment experience is crucial for...' },

@@ -20,13 +20,15 @@ const buttonStyle = {
 export default function HeroSection() {
   return (
     <section
+      className="r-hero"
       style={{
         background: 'linear-gradient(1deg, rgb(142, 235, 226) 0%, rgb(37, 232, 157) 100%)',
         padding: '60px 0 80px 0',
       }}
     >
-      <div style={{ maxWidth: '1080px', width: '80%', margin: '0 auto' }}>
+      <div className="r-container" style={{ maxWidth: '1080px', width: '80%', margin: '0 auto' }}>
         <div
+          className="r-flex-row"
           style={{
             display: 'flex',
             alignItems: 'center',
