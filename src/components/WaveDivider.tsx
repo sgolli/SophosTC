@@ -6,7 +6,7 @@ interface WaveDividerProps {
 }
 
 const paths = {
-  zigzag: 'M0 70.35l320-49.24 640 98.49 320-49.25V140H0V70.35z',
+  zigzag: 'M1280 70.35L960 21.11 320 119.6 0 70.35V140H1280V70.35z',
   diagonal: 'M0 0v140h1280L0 0z',
 };
 
@@ -20,7 +20,6 @@ export default function WaveDivider({ position, shape, fill, height = 90 }: Wave
         [position === 'top' ? 'top' : 'bottom']: 0,
         height: `${height}px`,
         lineHeight: 0,
-        transform: position === 'top' ? 'rotate(180deg)' : undefined,
         overflow: 'hidden',
         zIndex: 1,
       }}

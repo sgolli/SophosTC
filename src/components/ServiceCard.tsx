@@ -20,8 +20,8 @@ export default function ServiceCard({ icon, title, description, bgColor = '#2be8
     <div
       style={{
         backgroundColor: bgColor,
-        borderRadius: '8px',
-        padding: '40px 30px',
+        borderRadius: '15px',
+        padding: '100px 30px 30px',
         textAlign: 'center',
         transition: 'all 0.3s ease',
         display: 'flex',
@@ -38,7 +38,7 @@ export default function ServiceCard({ icon, title, description, bgColor = '#2be8
       <h4
         style={{
           fontFamily: 'var(--font-roboto), Roboto, Helvetica, Arial, sans-serif',
-          fontSize: '18px',
+          fontSize: '21px',
           fontWeight: 700,
           lineHeight: '1.4em',
           color: textColor,

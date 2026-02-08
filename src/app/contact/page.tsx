@@ -21,27 +21,17 @@ export default function ContactPage() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="r-hero" style={{ background: 'linear-gradient(1deg, rgb(142, 235, 226) 0%, rgb(37, 232, 157) 100%)', padding: '38.4px 0 51.2px', position: 'relative' }}>
+      <section style={{ background: 'linear-gradient(1deg, rgb(142, 235, 226) 0%, rgb(37, 232, 157) 100%)', padding: '43px 0 58px 0', position: 'relative' }}>
         <div className="r-container" style={{ maxWidth: '1080px', width: '80%', margin: '0 auto', textAlign: 'center' }}>
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <h1 style={{ fontFamily: 'var(--font-roboto), Roboto, Helvetica, Arial, sans-serif', fontSize: '65px', fontWeight: 900, lineHeight: '71.5px', color: '#000000', letterSpacing: '1.3px', textTransform: 'uppercase' }}>GET IN TOUCH</h1>
-          </motion.div>
+          <h2 style={{ fontFamily: 'var(--font-roboto), Roboto, Helvetica, Arial, sans-serif', fontSize: '45px', fontWeight: 700, color: '#121212', textTransform: 'uppercase', letterSpacing: '1px' }}>Get In Touch</h2>
         </div>
         <WaveDivider position="bottom" shape="zigzag" fill="#ffffff" height={35} />
       </section>
 
       {/* Contact Form Section */}
-      <section style={{ padding: '51.2px 0', backgroundColor: '#ffffff' }}>
+      <section style={{ padding: '54px 0', backgroundColor: '#ffffff' }}>
         <div className="r-container" style={{ maxWidth: '1080px', width: '80%', margin: '0 auto' }}>
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
+          <div>
             <p style={{ fontSize: '16px', fontWeight: 500, lineHeight: '28.8px', color: '#121212', marginBottom: '40px', maxWidth: '800px' }}>
               Ready to transform your business with cutting-edge technology? Get in touch with us today. Our expert team is dedicated to helping you achieve your goals and succeed in the dynamic world of finance, payments, and fintech. Let&apos;s innovate together!
             </p>
@@ -199,7 +189,7 @@ export default function ContactPage() {
                 </div>
               </div>
             </form>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

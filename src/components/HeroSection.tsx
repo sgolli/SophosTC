@@ -25,7 +25,7 @@ export default function HeroSection() {
       className="r-hero"
       style={{
         background: 'linear-gradient(1deg, rgb(142, 235, 226) 0%, rgb(37, 232, 157) 100%)',
-        padding: '72px 0 120px 0',
+        padding: '86px 0 144px 0',
         position: 'relative',
       }}
     >
