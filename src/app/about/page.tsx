@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import WaveDivider from '@/components/WaveDivider';
 
 export const metadata: Metadata = {
   title: 'About Us',
@@ -13,6 +14,7 @@ export default function AboutPage() {
         style={{
           background: 'linear-gradient(1deg, rgb(142, 235, 226) 0%, rgb(37, 232, 157) 100%)',
           padding: '38.4px 0 51.2px',
+          position: 'relative',
         }}
       >
         <div className="r-container" style={{maxWidth:"1080px",width:"80%",margin:"0 auto",textAlign:"center"}}>
@@ -29,6 +31,7 @@ export default function AboutPage() {
             About Us
           </h1>
         </div>
+        <WaveDivider position="bottom" shape="zigzag" fill="#ffffff" height={35} />
       </section>
 
       {/* Main content */}
@@ -118,7 +121,8 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section style={{padding:"51.2px 0",backgroundColor:"#25e89d"}}>
+      <section style={{padding:"120px 0 100px 0",backgroundColor:"#25e89d",position:'relative'}}>
+        <WaveDivider position="top" shape="zigzag" fill="#ffffff" height={100} />
         <div className="r-container" style={{maxWidth:"1080px",width:"80%",margin:"0 auto",textAlign:"center"}}>
           <h2 style={{ marginBottom: '20px' }}>Let&apos;s work together</h2>
           <p
@@ -137,6 +141,7 @@ export default function AboutPage() {
             Contact Us
           </a>
         </div>
+        <WaveDivider position="bottom" shape="diagonal" fill="#ffffff" height={100} />
       </section>
     </>
   );

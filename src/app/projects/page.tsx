@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import ProjectCard from '@/components/ProjectCard';
+import WaveDivider from '@/components/WaveDivider';
 
 export const metadata: Metadata = {
   title: 'Projects',
@@ -53,6 +54,7 @@ export default function ProjectsPage() {
         style={{
           background: 'linear-gradient(1deg, rgb(142, 235, 226) 0%, rgb(37, 232, 157) 100%)',
           padding: '38.4px 0 51.2px',
+          position: 'relative',
         }}
       >
         <div className="r-container" style={{maxWidth:"1080px",width:"80%",margin:"0 auto",textAlign:"center"}}>
@@ -72,6 +74,7 @@ export default function ProjectsPage() {
             We&apos;ve had the privilege of working on groundbreaking projects that showcase our expertise in finance, payments, and fintech.
           </p>
         </div>
+        <WaveDivider position="bottom" shape="zigzag" fill="#ffffff" height={35} />
       </section>
 
       {/* Projects grid */}
@@ -98,7 +101,8 @@ export default function ProjectsPage() {
       </section>
 
       {/* CTA */}
-      <section style={{padding:"51.2px 0",backgroundColor:"#25e89d"}}>
+      <section style={{padding:"120px 0 100px 0",backgroundColor:"#25e89d",position:'relative'}}>
+        <WaveDivider position="top" shape="zigzag" fill="#ffffff" height={100} />
         <div className="r-container" style={{maxWidth:"1080px",width:"80%",margin:"0 auto",textAlign:"center"}}>
           <h2 style={{ marginBottom: '20px' }}>Accelerate your business</h2>
           <p
@@ -117,6 +121,7 @@ export default function ProjectsPage() {
             Start Your Project
           </a>
         </div>
+        <WaveDivider position="bottom" shape="diagonal" fill="#ffffff" height={100} />
       </section>
     </>
   );

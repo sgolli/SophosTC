@@ -13,7 +13,7 @@ export default function Footer() {
               alt="Sophos Technology Consultancy LLC"
               width={193}
               height={85}
-              style={{ width: 'auto', height: 'auto', opacity: 0.5, maxWidth: '160px' }}
+              style={{ width: 'auto', height: 'auto' }}
               className="r-footer-logo"
             />
             <p style={{ fontSize: '14px', fontWeight: 500, lineHeight: '23.8px', color: '#474747' }}>
@@ -23,9 +23,9 @@ export default function Footer() {
 
           {/* Column 2: Menu */}
           <div className="r-footer-link-col">
-            <h4 style={{ fontFamily: 'var(--font-roboto), Roboto, Helvetica, Arial, sans-serif', fontSize: '20px', fontWeight: 700, color: '#25e89d', marginBottom: '20px' }}>
+            <h5 style={{ fontFamily: 'var(--font-roboto), Roboto, Helvetica, Arial, sans-serif', fontSize: '20px', fontWeight: 700, color: '#25e89d', marginBottom: '20px' }}>
               Menu
-            </h4>
+            </h5>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
               {[
                 { href: '/services', label: 'Services' },
@@ -44,14 +44,14 @@ export default function Footer() {
 
           {/* Column 3: Quick Links */}
           <div className="r-footer-link-col">
-            <h4 style={{ fontFamily: 'var(--font-roboto), Roboto, Helvetica, Arial, sans-serif', fontSize: '20px', fontWeight: 700, color: '#25e89d', marginBottom: '20px' }}>
+            <h5 style={{ fontFamily: 'var(--font-roboto), Roboto, Helvetica, Arial, sans-serif', fontSize: '20px', fontWeight: 700, color: '#25e89d', marginBottom: '20px' }}>
               Quick Links
-            </h4>
+            </h5>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
               {[
-                { href: '#', label: 'Privacy Policy' },
-                { href: '#', label: 'Terms of Service' },
-                { href: '#', label: 'Disclaimer' },
+                { href: '/privacy-policy', label: 'Privacy Policy' },
+                { href: '/terms-of-service', label: 'Terms of Service' },
+                { href: '/disclaimer', label: 'Disclaimer' },
               ].map((link) => (
                 <li key={link.label}>
                   <Link href={link.href} className="r-footer-link">
@@ -67,7 +67,7 @@ export default function Footer() {
         <div className="r-footer-divider">
           <div className="r-footer-bottom">
             <p style={{ fontSize: '14px', color: '#474747', margin: 0 }}>
-              All Rights Reserved | <Link href="/" style={{ color: '#000', fontWeight: 600, textDecoration: 'none' }}>Sophos Technology Consultancy LLC</Link> | © {new Date().getFullYear()}
+              All Rights Reserved | <Link href="/" style={{ color: '#000', fontWeight: 600, textDecoration: 'none' }}>Sophos Technology Consultancy LLC</Link> | © 2024
             </p>
             <div className="r-footer-socials">
               <a href="https://github.com/sophostc" target="_blank" rel="noopener noreferrer" className="r-social-icon">

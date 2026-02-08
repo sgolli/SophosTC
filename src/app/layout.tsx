@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Open_Sans, Roboto, Roboto_Flex, Inter } from "next/font/google";
+import { Open_Sans, Roboto, Roboto_Flex, Inter, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -28,6 +28,12 @@ const inter = Inter({
   weight: ["400", "500"]
 });
 
+const robotoMono = Roboto_Mono({
+  subsets: ["latin"],
+  variable: "--font-roboto-mono",
+  weight: ["400", "500", "700"]
+});
+
 export const metadata: Metadata = {
   title: {
     default: "Sophos Technology Consultancy LLC |",
@@ -49,7 +55,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${openSans.variable} ${roboto.variable} ${robotoFlex.variable} ${inter.variable}`}>
+      <body className={`${openSans.variable} ${roboto.variable} ${robotoFlex.variable} ${inter.variable} ${robotoMono.variable}`}>
         <Header />
         <div className="r-spacer" style={{ height: '94px' }} />
         <main>{children}</main>

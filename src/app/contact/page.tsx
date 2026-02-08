@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import WaveDivider from '@/components/WaveDivider';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -20,7 +21,7 @@ export default function ContactPage() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="r-hero" style={{ background: 'linear-gradient(1deg, rgb(142, 235, 226) 0%, rgb(37, 232, 157) 100%)', padding: '38.4px 0 51.2px' }}>
+      <section className="r-hero" style={{ background: 'linear-gradient(1deg, rgb(142, 235, 226) 0%, rgb(37, 232, 157) 100%)', padding: '38.4px 0 51.2px', position: 'relative' }}>
         <div className="r-container" style={{ maxWidth: '1080px', width: '80%', margin: '0 auto', textAlign: 'center' }}>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -30,6 +31,7 @@ export default function ContactPage() {
             <h1 style={{ fontFamily: 'var(--font-roboto), Roboto, Helvetica, Arial, sans-serif', fontSize: '65px', fontWeight: 900, lineHeight: '71.5px', color: '#000000', letterSpacing: '1.3px', textTransform: 'uppercase' }}>GET IN TOUCH</h1>
           </motion.div>
         </div>
+        <WaveDivider position="bottom" shape="zigzag" fill="#ffffff" height={35} />
       </section>
 
       {/* Contact Form Section */}
@@ -128,7 +130,7 @@ export default function ContactPage() {
                   </label>
                   <input
                     type="text"
-                    placeholder="Subject"
+                    placeholder="Enter Email Subject"
                     required
                     value={formData.subject}
                     onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
@@ -154,7 +156,7 @@ export default function ContactPage() {
                     Message <span style={{ color: '#e02b20' }}>*</span>
                   </label>
                   <textarea
-                    placeholder="Message"
+                    placeholder="Type Your Message Here"
                     required
                     rows={8}
                     value={formData.message}
