@@ -6,8 +6,14 @@ interface WaveDividerProps {
 }
 
 const paths = {
-  zigzag: 'M1280 70.35L960 21.11 320 119.6 0 70.35V140H1280V70.35z',
-  diagonal: 'M0 0v140h1280L0 0z',
+  zigzag: {
+    top: 'M1280 0H0V70.35L320 21.11 960 119.6 1280 70.35V0z',
+    bottom: 'M0 70.35L320 21.11 960 119.6 1280 70.35V140H0V70.35z',
+  },
+  diagonal: {
+    top: 'M1280 0v140H0L1280 0z',
+    bottom: 'M1280 0v140H0L1280 0z',
+  },
 };
 
 export default function WaveDivider({ position, shape, fill, height = 90 }: WaveDividerProps) {
@@ -29,7 +35,7 @@ export default function WaveDivider({ position, shape, fill, height = 90 }: Wave
         preserveAspectRatio="none"
         style={{ width: '100%', height: '100%', display: 'block' }}
       >
-        <path d={paths[shape]} fill={fill} />
+        <path d={paths[shape][position]} fill={fill} />
       </svg>
     </div>
   );

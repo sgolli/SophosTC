@@ -1,0 +1,154 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Sophos Technology Consultancy LLC" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - img "Sophos Technology Consultancy LLC" [ref=e5]
+      - navigation [ref=e6]:
+        - link "Services" [ref=e7] [cursor=pointer]:
+          - /url: /services
+        - link "Projects" [ref=e8] [cursor=pointer]:
+          - /url: /projects
+        - link "About Us" [ref=e9] [cursor=pointer]:
+          - /url: /about
+        - link "Blog" [ref=e10] [cursor=pointer]:
+          - /url: /blog
+        - link "Contact Us" [ref=e11] [cursor=pointer]:
+          - /url: /contact
+  - main [ref=e13]:
+    - generic [ref=e16]:
+      - generic [ref=e17]:
+        - heading "Welcome to Sophos" [level=1] [ref=e18]
+        - generic [ref=e19]:
+          - paragraph [ref=e20]: Your premier partner for cutting-edge software solutions in finance, payments, and fintech.
+          - paragraph [ref=e21]: With our deep industry expertise and innovative approach, we empower businesses to stay ahead in the rapidly evolving digital landscape.
+          - paragraph [ref=e22]: Discover how our tailored solutions can transform your operations, enhance customer experiences, and drive sustainable growth.
+        - link "Get Started >" [ref=e24] [cursor=pointer]:
+          - /url: /contact
+      - img "Fintech Innovation" [ref=e26]
+    - generic [ref=e28]:
+      - generic [ref=e29]:
+        - heading "Services" [level=2] [ref=e30]
+        - paragraph [ref=e31]: Empowering finance through technology, innovation, and expertise.
+      - generic [ref=e32]:
+        - generic [ref=e33]:
+          - img [ref=e35]
+          - heading "Software Development for Financial Institutions" [level=4] [ref=e37]
+          - paragraph [ref=e39]: Leverage our expertise to develop robust, scalable, and secure software solutions tailored to your financial institution's unique needs. From core banking systems to customer-facing applications, we deliver cutting-edge technology that streamlines operations, enhances efficiency, and improves customer satisfaction.
+          - generic [ref=e41]: →
+        - generic [ref=e42]:
+          - img [ref=e44]
+          - heading "Payment Gateway Integration & Optimization" [level=4] [ref=e50]
+          - paragraph [ref=e52]: Seamlessly integrate payment gateways into your existing infrastructure or build custom payment solutions from scratch. Our team ensures smooth, secure, and reliable payment processing, while optimizing transaction flows and minimizing costs, enabling you to focus on growing your business.
+          - generic [ref=e54]: →
+        - generic [ref=e55]:
+          - img [ref=e57]
+          - heading "Fintech Consulting and Innovation" [level=4] [ref=e62]
+          - paragraph [ref=e64]: Stay at the forefront of the fintech revolution with our strategic consulting services. We provide in-depth market insights, identify emerging trends, and develop innovative strategies to help you seize new opportunities, disrupt traditional markets, and establish a competitive edge in the fintech space.
+          - generic [ref=e66]: →
+    - generic [ref=e69]:
+      - generic [ref=e70]:
+        - heading "About Us" [level=2] [ref=e71]
+        - paragraph [ref=e72]: At Sophos Technology Consultancy, we are passionate about harnessing the power of technology to revolutionize the finance, payments, and fintech industries. With our team of skilled developers, industry experts, and strategic thinkers, we deliver cutting-edge software solutions that drive efficiency, innovation, and growth.
+        - paragraph [ref=e73]: Our client-centric approach ensures that we understand your unique challenges and objectives, allowing us to craft tailored solutions that exceed your expectations. As your trusted technology partner, we are committed to helping you navigate the digital landscape, seize new opportunities, and achieve long-term success in the ever-evolving world of finance and technology.
+        - link "Learn More >" [ref=e74] [cursor=pointer]:
+          - /url: /about
+      - img "About Sophos Technology Consultancy" [ref=e76]
+    - generic [ref=e79]:
+      - img "Our Projects" [ref=e81]
+      - generic [ref=e82]:
+        - heading "Projects" [level=2] [ref=e83]
+        - paragraph [ref=e84]: We've had the privilege of working on groundbreaking projects that showcase our expertise. From developing secure and scalable banking solutions to integrating seamless payment gateways, our portfolio demonstrates our commitment to delivering cutting-edge technology that drives success for our clients.
+        - paragraph [ref=e85]: Explore our featured projects to see how we've helped businesses like yours transform their operations, enhance customer experiences, and stay ahead in the rapidly evolving digital landscape.
+        - link "Learn More >" [ref=e86] [cursor=pointer]:
+          - /url: /projects
+    - generic [ref=e89]:
+      - generic [ref=e90]:
+        - heading "Solutions driving your success" [level=2] [ref=e91]
+        - paragraph [ref=e92]: Sophos Technology Consultancy empowers finance, payments, and fintech businesses with innovative software development, strategic consulting, and cloud expertise. Let our team help you navigate the digital landscape and achieve your goals.
+        - paragraph [ref=e93]: Contact us today to start your transformation!
+        - link "Contact Us >" [ref=e94] [cursor=pointer]:
+          - /url: /contact
+      - img "Solutions" [ref=e96]
+    - generic [ref=e98]:
+      - generic [ref=e99]:
+        - heading "Our Blog" [level=2] [ref=e100]
+        - link "View All >" [ref=e101] [cursor=pointer]:
+          - /url: /blog
+      - generic [ref=e102]:
+        - generic [ref=e103]:
+          - img "Unlocking Business Potential Through Cutting-Edge Software Development" [ref=e105]
+          - generic [ref=e106]:
+            - paragraph [ref=e107]: by sophostc | Mar 20, 2024
+            - heading "Unlocking Business Potential Through Cutting-Edge Software Development" [level=4] [ref=e108]
+            - paragraph [ref=e109]: In today's fast-paced digital world, businesses in the finance, payments, and fintech industries...
+            - link "READ MORE" [ref=e110] [cursor=pointer]:
+              - /url: https://sophostc.com/unlocking-business-potential-through-cutting-edge-software-development/
+        - generic [ref=e111]:
+          - 'img "Streamlining Payments: The Power of Seamless Payment Gateway Integration" [ref=e113]'
+          - generic [ref=e114]:
+            - paragraph [ref=e115]: by sophostc | Mar 7, 2024
+            - 'heading "Streamlining Payments: The Power of Seamless Payment Gateway Integration" [level=4] [ref=e116]'
+            - paragraph [ref=e117]: In the world of e-commerce and online transactions, a seamless payment experience is crucial for...
+            - link "READ MORE" [ref=e118] [cursor=pointer]:
+              - /url: https://sophostc.com/streamlining-payments-the-power-of-seamless-payment-gateway-integration/
+        - generic [ref=e119]:
+          - 'img "Unlocking the Power: Strategies for Cloud Migration and Optimization" [ref=e121]'
+          - generic [ref=e122]:
+            - paragraph [ref=e123]: by sophostc | Feb 21, 2024
+            - 'heading "Unlocking the Power: Strategies for Cloud Migration and Optimization" [level=4] [ref=e124]'
+            - paragraph [ref=e125]: In today's fast-paced, data-driven business environment, cloud computing has emerged as a...
+            - link "READ MORE" [ref=e126] [cursor=pointer]:
+              - /url: https://sophostc.com/unlocking-the-power-strategies-for-cloud-migration-and-optimization/
+  - contentinfo [ref=e127]:
+    - generic [ref=e128]:
+      - generic [ref=e129]:
+        - generic [ref=e130]:
+          - img "Sophos Technology Consultancy LLC" [ref=e131]
+          - paragraph [ref=e132]: Sophos Technology Consultancy LLC is a UAE-based software development company specializing in cutting-edge solutions for the finance, payments, and fintech industries.
+        - generic [ref=e133]:
+          - heading "Menu" [level=5] [ref=e134]
+          - list [ref=e135]:
+            - listitem [ref=e136]:
+              - link "Services" [ref=e137] [cursor=pointer]:
+                - /url: /services
+            - listitem [ref=e138]:
+              - link "Projects" [ref=e139] [cursor=pointer]:
+                - /url: /projects
+            - listitem [ref=e140]:
+              - link "About Us" [ref=e141] [cursor=pointer]:
+                - /url: /about
+            - listitem [ref=e142]:
+              - link "Contact Us" [ref=e143] [cursor=pointer]:
+                - /url: /contact
+        - generic [ref=e144]:
+          - heading "Quick Links" [level=5] [ref=e145]
+          - list [ref=e146]:
+            - listitem [ref=e147]:
+              - link "Privacy Policy" [ref=e148] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e149]:
+              - link "Terms of Service" [ref=e150] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e151]:
+              - link "Disclaimer" [ref=e152] [cursor=pointer]:
+                - /url: "#"
+      - generic [ref=e154]:
+        - paragraph [ref=e155]:
+          - text: All Rights Reserved |
+          - link "Sophos Technology Consultancy LLC" [ref=e156] [cursor=pointer]:
+            - /url: /
+          - text: "| © 2026"
+        - generic [ref=e157]:
+          - link [ref=e158] [cursor=pointer]:
+            - /url: https://github.com/sophostc
+            - img [ref=e159]
+          - link [ref=e161] [cursor=pointer]:
+            - /url: https://twitter.com/sophostc
+            - img [ref=e162]
+          - link [ref=e164] [cursor=pointer]:
+            - /url: https://linkedin.com/company/sophostc
+            - img [ref=e165]
+  - button "Open Next.js Dev Tools" [ref=e172] [cursor=pointer]:
+    - img [ref=e173]
+  - alert [ref=e176]

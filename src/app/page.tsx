@@ -2,6 +2,7 @@ import Link from 'next/link';
 import HeroSection from '@/components/HeroSection';
 import ServiceCard from '@/components/ServiceCard';
 import WaveDivider from '@/components/WaveDivider';
+import ScrollReveal from '@/components/ScrollReveal';
 
 const buttonStyle = {
   fontFamily: 'var(--font-roboto), Roboto, Helvetica, Arial, sans-serif',
@@ -97,6 +98,7 @@ export default function HomePage() {
       {/* Services Section - gray bg */}
       <section className="r-section" style={{ backgroundColor: '#f2f2f2', padding: '54px 0' }}>
         <div className="r-container" style={containerStyle}>
+          <ScrollReveal>
           <div style={{ textAlign: 'center', marginBottom: '50px' }}>
             <h2>Services</h2>
             <p
@@ -115,6 +117,8 @@ export default function HomePage() {
               Empowering finance through technology, innovation, and expertise.
             </p>
           </div>
+          </ScrollReveal>
+          <ScrollReveal delay={0.15}>
           <div
             className="r-grid-3"
             style={{
@@ -134,12 +138,14 @@ export default function HomePage() {
               />
             ))}
           </div>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* About Section - white, text only */}
       <section style={{ padding: '54px 0' }}>
         <div className="r-container" style={containerStyle}>
+          <ScrollReveal>
           <h2 style={{ marginBottom: '20px' }}>About Us</h2>
           <p
             style={{
@@ -166,6 +172,7 @@ export default function HomePage() {
           <Link href="/about" style={buttonStyle}>
             Learn More &nbsp;&gt;
           </Link>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -173,32 +180,41 @@ export default function HomePage() {
       <section style={{ backgroundColor: '#25e89d', padding: '150px 0', position: 'relative' }}>
         <WaveDivider position="top" shape="zigzag" fill="#ffffff" height={100} />
         <div className="r-container" style={containerStyle}>
-          <h2 style={{ marginBottom: '20px' }}>Projects</h2>
-          <p
-            style={{
-              fontSize: '16px',
-              fontWeight: 500,
-              lineHeight: '28.8px',
-              color: '#121212',
-              marginBottom: '15px',
-            }}
-          >
-            We&apos;ve had the privilege of working on groundbreaking projects that showcase our expertise. From developing secure and scalable banking solutions to integrating seamless payment gateways, our portfolio demonstrates our commitment to delivering cutting-edge technology that drives success for our clients.
-          </p>
-          <p
-            style={{
-              fontSize: '16px',
-              fontWeight: 500,
-              lineHeight: '28.8px',
-              color: '#121212',
-              marginBottom: '25px',
-            }}
-          >
-            Explore our featured projects to see how we&apos;ve helped businesses like yours transform their operations, enhance customer experiences, and stay ahead in the rapidly evolving digital landscape.
-          </p>
-          <Link href="/projects" style={buttonStyle}>
-            Learn More &nbsp;&gt;
-          </Link>
+          <ScrollReveal>
+          <div className="r-flex-row" style={{ display: 'flex', alignItems: 'center', gap: '40px', flexWrap: 'wrap' as const }}>
+            <div style={{ flex: '1 1 45%', minWidth: '280px' }}>
+              <img src="/images/projects.png" alt="Projects" style={{ width: '100%', height: 'auto', borderRadius: '8px' }} />
+            </div>
+            <div style={{ flex: '1 1 50%', minWidth: '300px' }}>
+              <h2 style={{ marginBottom: '20px' }}>Projects</h2>
+              <p
+                style={{
+                  fontSize: '16px',
+                  fontWeight: 500,
+                  lineHeight: '28.8px',
+                  color: '#121212',
+                  marginBottom: '15px',
+                }}
+              >
+                We&apos;ve had the privilege of working on groundbreaking projects that showcase our expertise. From developing secure and scalable banking solutions to integrating seamless payment gateways, our portfolio demonstrates our commitment to delivering cutting-edge technology that drives success for our clients.
+              </p>
+              <p
+                style={{
+                  fontSize: '16px',
+                  fontWeight: 500,
+                  lineHeight: '28.8px',
+                  color: '#121212',
+                  marginBottom: '25px',
+                }}
+              >
+                Explore our featured projects to see how we&apos;ve helped businesses like yours transform their operations, enhance customer experiences, and stay ahead in the rapidly evolving digital landscape.
+              </p>
+              <Link href="/projects" style={buttonStyle}>
+                Learn More &nbsp;&gt;
+              </Link>
+            </div>
+          </div>
+          </ScrollReveal>
         </div>
         <WaveDivider position="bottom" shape="diagonal" fill="#ffffff" height={100} />
       </section>
@@ -206,6 +222,7 @@ export default function HomePage() {
       {/* Solutions Section - white */}
       <section style={{ padding: '54px 0' }}>
         <div className="r-container" style={containerStyle}>
+          <ScrollReveal>
           <h2 style={{ marginBottom: '20px' }}>Solutions driving your success</h2>
           <p
             style={{
@@ -232,6 +249,7 @@ export default function HomePage() {
           <Link href="/contact" style={buttonStyle}>
             Contact Us &nbsp;&gt;
           </Link>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -241,6 +259,7 @@ export default function HomePage() {
 
         <div className="r-container" style={containerStyle}>
           {/* Header row: title left, button right */}
+          <ScrollReveal>
           <div className="r-blog-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '40px', flexWrap: 'wrap' as const, gap: '15px' }}>
             <h2 style={{ margin: 0 }}>Our Blog</h2>
             <Link href="/blog" style={buttonStyle}>
@@ -309,6 +328,7 @@ export default function HomePage() {
               &laquo; Older Entries
             </a>
           </div>
+          </ScrollReveal>
         </div>
         <WaveDivider position="bottom" shape="diagonal" fill="#ffffff" height={100} />
       </section>

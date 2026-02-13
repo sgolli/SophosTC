@@ -117,7 +117,7 @@ export default function HeroSection() {
           >
             <motion.div
               animate={{ rotate: 360 }}
-              transition={{ duration: 25, repeat: Infinity, ease: 'linear' }}
+              transition={{ duration: 4, ease: 'easeOut' }}
               style={{ transform: 'scale(1.15) translateY(-18%)' }}
             >
               <Image
