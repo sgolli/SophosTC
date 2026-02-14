@@ -3,6 +3,7 @@ import HeroSection from '@/components/HeroSection';
 import ServiceCard from '@/components/ServiceCard';
 import WaveDivider from '@/components/WaveDivider';
 import ScrollReveal from '@/components/ScrollReveal';
+import { blogPosts } from '@/data/blogPosts';
 
 const buttonStyle = {
   fontFamily: 'var(--font-roboto), Roboto, Helvetica, Arial, sans-serif',
@@ -66,29 +67,7 @@ export default function HomePage() {
     },
   ];
 
-  const blogPosts = [
-    {
-      title: 'Unlocking Business Potential Through Cutting-Edge Software Development',
-      date: 'Mar 20, 2024',
-      excerpt: "In today's fast-paced digital world, businesses in the finance, payments, and fintech industries...",
-      image: 'https://i0.wp.com/sophostc.com/wp-content/uploads/2024/03/6.png?resize=400%2C250&ssl=1',
-      url: 'https://sophostc.com/2024/03/unlocking-business-potential-through-cutting-edge-software-development/',
-    },
-    {
-      title: 'Streamlining Payments: The Power of Seamless Payment Gateway Integration',
-      date: 'Mar 7, 2024',
-      excerpt: 'In the world of e-commerce and online transactions, a seamless payment experience is crucial for...',
-      image: 'https://i0.wp.com/sophostc.com/wp-content/uploads/2024/03/5.png?resize=400%2C250&ssl=1',
-      url: 'https://sophostc.com/2024/03/streamlining-payments/',
-    },
-    {
-      title: 'Unlocking the Power: Strategies for Cloud Migration and Optimization',
-      date: 'Feb 21, 2024',
-      excerpt: "In today's fast-paced, data-driven business environment, cloud computing has emerged as a...",
-      image: 'https://i0.wp.com/sophostc.com/wp-content/uploads/2024/03/1.png?resize=400%2C250&ssl=1',
-      url: 'https://sophostc.com/2024/02/the-importance-of-lorem-ipsum/',
-    },
-  ];
+  const homeBlogPosts = blogPosts.slice(0, 3);
 
   return (
     <>
@@ -268,21 +247,21 @@ export default function HomePage() {
           </div>
           {/* Blog cards */}
           <div className="r-blog-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '30px', textAlign: 'left' as const }}>
-            {blogPosts.map((post, i) => (
+            {homeBlogPosts.map((post, i) => (
               <div key={i} style={{ backgroundColor: '#242424', borderRadius: '15px', overflow: 'hidden' }}>
                 {/* Thumbnail */}
-                <a href={post.url} target="_blank" rel="noopener noreferrer">
+                <Link href={`/blog/${post.slug}`}>
                   <img
                     src={post.image}
                     alt={post.title}
                     style={{ width: '100%', height: '200px', objectFit: 'cover', display: 'block' }}
                   />
-                </a>
+                </Link>
                 <div style={{ padding: '20px' }}>
                   <h2 style={{ fontSize: '20px', fontWeight: 500, lineHeight: '1.4em', color: '#ffffff', marginBottom: '10px' }}>
-                    <a href={post.url} target="_blank" rel="noopener noreferrer" style={{ color: '#ffffff', textDecoration: 'none' }}>
+                    <Link href={`/blog/${post.slug}`} style={{ color: '#ffffff', textDecoration: 'none' }}>
                       {post.title}
-                    </a>
+                    </Link>
                   </h2>
                   <p style={{
                     fontSize: '14px',
@@ -293,15 +272,13 @@ export default function HomePage() {
                     letterSpacing: '1px',
                     fontFamily: '"Roboto Mono", monospace',
                   }}>
-                    by <a href="https://sophostc.com/author/sophostc/" target="_blank" rel="noopener noreferrer" style={{ color: '#25e89d', textDecoration: 'none' }}>sophostc</a> | {post.date} |
+                    by sophostc | {post.date} |
                   </p>
                   <p style={{ fontSize: '16px', fontWeight: 400, lineHeight: '28.8px', color: '#ffffff', marginBottom: '15px' }}>
                     {post.excerpt}
                   </p>
-                  <a
-                    href={post.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Link
+                    href={`/blog/${post.slug}`}
                     style={{
                       fontSize: '16px',
                       fontWeight: 700,
@@ -317,16 +294,16 @@ export default function HomePage() {
                     }}
                   >
                     read more
-                  </a>
+                  </Link>
                 </div>
               </div>
             ))}
           </div>
           {/* Older Entries link */}
           <div style={{ marginTop: '30px' }}>
-            <a href="https://sophostc.com/page/2/?et_blog" style={{ color: '#2ea3f2', fontSize: '16px', textDecoration: 'none' }}>
+            <Link href="/blog" style={{ color: '#2ea3f2', fontSize: '16px', textDecoration: 'none' }}>
               &laquo; Older Entries
-            </a>
+            </Link>
           </div>
           </ScrollReveal>
         </div>
