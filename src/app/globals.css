@@ -1,5 +1,23 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Trustpilot Sans";
+  font-style: normal;
+  font-weight: 300 650;
+  font-display: swap;
+  src: url("/fonts/Trustpilot-Sans.woff2") format("woff2"),
+       url("/fonts/Trustpilot-Sans.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Trustpilot Display";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("/fonts/Trustpilot-Display-Extrabold.woff2") format("woff2"),
+       url("/fonts/Trustpilot-Display-Extrabold.woff") format("woff");
+}
+
 :root {
   --background: #ffffff;
   --foreground: #666666;
@@ -35,15 +53,15 @@ html, body {
 body {
   background: var(--background);
   color: var(--text-color);
-  font-family: var(--font-open-sans), "Open Sans", Arial, sans-serif;
+  font-family: "Trustpilot Sans", Arial, sans-serif;
   line-height: 1.7em;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 450;
 }
 
 h1, h2, h3, h4, h5, h6 {
   color: var(--heading-color);
-  font-family: var(--font-roboto), Roboto, Helvetica, Arial, Lucida, sans-serif;
+  font-family: "Trustpilot Sans", Arial, sans-serif;
 }
 
 h1 {

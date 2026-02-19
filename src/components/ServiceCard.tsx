@@ -13,6 +13,7 @@ interface ServiceCardProps {
 export default function ServiceCard({ icon, title, description, bgColor = '#2be8a1' }: ServiceCardProps) {
   const isLight = bgColor === '#2be8a1';
   const textColor = isLight ? '#121212' : '#ffffff';
+  const iconColor = isLight ? '#121212' : '#25e89d';
   const descColor = isLight ? 'rgba(0,0,0,0.7)' : 'rgba(255,255,255,0.85)';
   const dividerColor = isLight ? 'rgba(0,0,0,0.3)' : 'rgba(255,255,255,0.4)';
 
@@ -30,7 +31,7 @@ export default function ServiceCard({ icon, title, description, bgColor = '#2be8
       }}
     >
       {/* Icon */}
-      <div style={{ marginBottom: '20px', color: textColor }}>
+      <div style={{ marginBottom: '20px', color: iconColor }}>
         {icon}
       </div>
 
@@ -72,21 +73,9 @@ export default function ServiceCard({ icon, title, description, bgColor = '#2be8
 
       {/* Arrow */}
       <div style={{ marginTop: '25px' }}>
-        <span
-          style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            width: '40px',
-            height: '40px',
-            borderRadius: '50%',
-            border: `2px solid ${dividerColor}`,
-            color: textColor,
-            fontSize: '20px',
-          }}
-        >
-          →
-        </span>
+        <svg width="32" height="32" fill="none" stroke={textColor} strokeWidth={2} viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M13 6l6 6-6 6" />
+        </svg>
       </div>
     </div>
   );

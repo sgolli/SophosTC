@@ -1,38 +1,7 @@
 import type { Metadata } from "next";
-import { Open_Sans, Roboto, Roboto_Flex, Inter, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-
-const openSans = Open_Sans({ 
-  subsets: ["latin"], 
-  variable: "--font-open-sans",
-  weight: ["400", "500", "600", "700"]
-});
-
-const roboto = Roboto({ 
-  subsets: ["latin"], 
-  variable: "--font-roboto",
-  weight: ["400", "500", "700", "900"]
-});
-
-const robotoFlex = Roboto_Flex({ 
-  subsets: ["latin"], 
-  variable: "--font-roboto-flex",
-  weight: ["600"]
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  weight: ["400", "500"]
-});
-
-const robotoMono = Roboto_Mono({
-  subsets: ["latin"],
-  variable: "--font-roboto-mono",
-  weight: ["400", "500", "700"]
-});
 
 export const metadata: Metadata = {
   title: {
@@ -55,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${openSans.variable} ${roboto.variable} ${robotoFlex.variable} ${inter.variable} ${robotoMono.variable}`}>
+      <body>
         <Header />
         <div className="r-spacer" style={{ height: '94px' }} />
         <main>{children}</main>

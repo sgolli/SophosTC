@@ -67,7 +67,7 @@ export default function Footer() {
         <div className="r-footer-divider">
           <div className="r-footer-bottom">
             <p style={{ fontSize: '14px', color: '#474747', margin: 0 }}>
-              All Rights Reserved | <Link href="/" style={{ color: '#000', fontWeight: 600, textDecoration: 'none' }}>Sophos Technology Consultancy LLC</Link> | © 2024
+              All Rights Reserved | <Link href="/" style={{ color: '#000', fontWeight: 600, textDecoration: 'none' }}>Sophos Technology Consultancy LLC</Link> | © 2026
             </p>
             <div className="r-footer-socials">
               <a href="https://github.com/sophostc" target="_blank" rel="noopener noreferrer" className="r-social-icon">
